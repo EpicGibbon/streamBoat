@@ -6,11 +6,13 @@ import { loadUser } from "../actions/authActions";
 import NavBar from "./NavBar";
 import Home from "../pages/Home";
 import UserDashboard from "../pages/UserDashboard";
-import PageOne from "../pages/PageOne";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
+import Discover from '../pages/Discover';
+import BandPage from '../pages/BandPage';
+
 
 export const App = () => {
 
@@ -28,8 +30,9 @@ export const App = () => {
                     <Route path="/" exact component={Home} />
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
+                    <Route path="/Discover" exact component={Discover}/>
+                    <PrivateRoute path="/BandPage" exact component={BandPage}/>
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
-                    <PrivateRoute path="/pageone" component={PageOne} />
                     <Route component={NoMatch} />
                 </Switch>
             </Router>
