@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
 import Discover from '../pages/Discover';
 import BandPage from '../pages/BandPage';
+import Footer from '../components/Footer'
 
 
 export const App = () => {
@@ -35,6 +36,7 @@ export const App = () => {
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
                     <Route component={NoMatch} />
                 </Switch>
+            <Footer />
             </Router>
         </>
     )
