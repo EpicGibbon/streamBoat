@@ -30,7 +30,8 @@ export const NavBar = () => {
     return (
         <div className="ui inverted menu">
             <Link to="/" className="item">Home</Link>
-            {isAuthenticated ? <Link to="/pageone" className="item">Page One</Link> : ""}
+            {isAuthenticated ? <Link to="/Discover" className="item">Discover</Link> : ""}
+            {isAuthenticated ? <Link to="/BandPage" className="item">Search</Link> : ""}
             <div className="right menu">
                 {showLinks()}
             </div>
