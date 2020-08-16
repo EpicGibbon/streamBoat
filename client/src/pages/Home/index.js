@@ -2,7 +2,6 @@ import React from 'react'
 import { Header, Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { Carousel } from 'react-bootstrap';
 import CarouselHome from '../../components/CarouselHome'
 
 export const Home = () => {
