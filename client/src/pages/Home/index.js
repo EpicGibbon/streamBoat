@@ -2,6 +2,8 @@ import React from 'react'
 import { Header, Message, Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Carousel } from 'react-bootstrap';
+import CarouselHome from '../../components/CarouselHome'
 
 export const Home = () => {
     // access to the isAuthenticated property from the auth reducer state
@@ -29,6 +31,7 @@ export const Home = () => {
                 <Link to="/login">
                     {showLoginBtn()}
                 </Link>
+                <CarouselHome />
             </Message>
 
         </div>
