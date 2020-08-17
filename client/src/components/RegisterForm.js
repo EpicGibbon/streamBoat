@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+// import Multiselect from  'react-bootstrap-multiselect';
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Form, Message, Segment, Label } from 'semantic-ui-react';
 import { Field, reduxForm } from "redux-form";
@@ -30,12 +31,17 @@ const RegisterForm = (props) => {
                     <Field
                         name="firstname"
                         component={renderInput}
-                        label="Enter Name"
+                        label="Enter First Name"
                     />
                     <Field
                         name="lastname"
                         component={renderInput}
                         label="Enter Last name"
+                    /> 
+                    <Field
+                        name="username"
+                        component={renderInput}
+                        label="Username"
                     />
                     <Field
                         name="email"
@@ -47,6 +53,12 @@ const RegisterForm = (props) => {
                         name="password"
                         component={renderInput}
                         label="Password"
+                    />
+                    
+                     <Field
+                        name="genres"
+                        component={multiInput}
+                        label="genres"
                     />
                     <Button secondary fluid size='large'>
                         {props.buttonText}
@@ -64,7 +76,7 @@ const renderInput = ({ input, label }) => {
 
     const selectIcon = () => {
 
-        if (input.name === "email" || input.name === "firstname" || input.name === "lastname") {
+        if (input.name === "email" || input.name === "firstname" || input.name === "lastname" || input.name === "username") {
             return "user icon"
         } else {
             return "lock icon"
@@ -83,6 +95,31 @@ const renderInput = ({ input, label }) => {
 
     )
 }
+
+const multiInput = ({input, label}) => {
+    let genres = []
+     
+    return (
+
+        <div class="row">
+        <div class="col-md-12">
+      
+          <select class="mdb-select colorful-select dropdown-primary md-form" multiple searchable="Search here..">
+            <option value="" disabled selected>Choose your country</option>
+            <option value="1">USA</option>
+            <option value="2">Germany</option>
+            <option value="3">France</option>
+            <option value="4">Poland</option>
+            <option value="5">Japan</option>
+          </select>
+          <label class="mdb-main-label">Label example</label>
+          <button class="btn-save btn btn-primary btn-sm">Save</button>
+      
+        </div>
+      </div>
+    )
+}
+
 
 
 export default reduxForm({
