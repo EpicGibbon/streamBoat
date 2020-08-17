@@ -25,6 +25,7 @@ const Login = (props) => {
     }
 
     const onFormSubmit = (formVal) => {
+        console.log(formVal);
         dispatch(loginUser(formVal));
     }
 
