@@ -17,6 +17,15 @@ const UserSchema = new Schema({
     password: {
         type: String,
         require: true
+    },
+    username: {
+        type: String,
+        require: true
+    },
+    genres:
+    {
+        type: Array,
+        require: true
     }
 });
 
