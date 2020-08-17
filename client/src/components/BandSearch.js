@@ -1,4 +1,5 @@
 import React from "react";
+import ArtistFilter from '../components/Filter'
 
 export const BandSearch = ({ artists }) => {
     //Word keeps track of any change to the input in the filter box
