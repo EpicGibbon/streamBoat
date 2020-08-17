@@ -13,6 +13,8 @@ import NoMatch from "../pages/NoMatch";
 import Discover from '../pages/Discover';
 import BandPage from '../pages/BandPage';
 import Footer from '../components/Footer'
+import {Grid, Paper} from '@material-ui/core'
+import {makeStyles} from '@material-ui/core/styles'
 
 
 export const App = () => {
