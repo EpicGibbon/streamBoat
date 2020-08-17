@@ -20,13 +20,7 @@ const UserSchema = new Schema({
     },
     username: {
         type: String,
-        require: true
-    },
-    genres:
-    {
-        type: Array,
-        require: true
+        require:true
     }
 });
-
 module.exports = User = mongoose.model("user", UserSchema);
