@@ -26,9 +26,6 @@ export const Home = () => {
     return (
         <div>
             <Hero />
-            <Link to="/login">
-                {showLoginBtn()}
-            </Link>
             <CarouselHome />
             <AboutSBoat />
         </div>
