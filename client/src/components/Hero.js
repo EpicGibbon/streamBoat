@@ -3,7 +3,6 @@ import { Jumbotron } from 'react-bootstrap';
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-import streamboat from '../images/streamboat.jpg'
 import navlogo from '../images/navlogo.png'
 
 class Hero extends React.Component {
