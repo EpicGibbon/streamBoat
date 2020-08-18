@@ -1,12 +1,10 @@
 import React from 'react'
-import { Header, Message, Button, Icon } from "semantic-ui-react";
+import { Button, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import CarouselHome from '../../components/CarouselHome'
 import Hero from '../../components/Hero'
 import AboutSBoat from '../../components/AboutSBoat'
-import {Grid, Paper} from '@material-ui/core'
-import {makeStyles} from '@material-ui/core/styles'
 
 export const Home = () => {
     // access to the isAuthenticated property from the auth reducer state
@@ -26,13 +24,11 @@ export const Home = () => {
     }
 
     return (
-        <grid>
         <div>
             <Hero />
             <CarouselHome />
             <AboutSBoat />
         </div>
-        </grid>
     )
 };
 
