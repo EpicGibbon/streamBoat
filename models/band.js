@@ -1,30 +1,30 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
-    firstname: {
+const BandSchema = new Schema({
+    bandname: {
         type: String,
         require: true
     },
-    lastname: {
+    location: {
         type: String,
+        require: true
+    },
+    members: {
+        type: Array,
         require: true
     },
     email: {
         type: String,
         require: true
-    },
-    password: {
+    }, 
+    genre: {
         type: String,
         require: true
     },
-    username: {
-        type: String,
-        require: true
-    },
-    favgenres: {
+    images: {
         type: Array,
-        require: true
-}
+        require: false
+    }
 });
-module.exports = User = mongoose.model("user", UserSchema);
+module.exports = Band = mongoose.model("band", BandSchema);

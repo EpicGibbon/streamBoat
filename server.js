@@ -15,10 +15,12 @@ app.use(express.json())
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, "./client/build")))
 };
-
+// || "mongodb+srv://CamGram:camg1023@cluster0.hqiad.mongodb.net/sboat?retryWrites=true&w=majority",
 // connect to Mongo DB 
+
 mongoose.connect(config.MONGO_URI || "mongodb+srv://CamGram:camg1023@cluster0.hqiad.mongodb.net/sboat?retryWrites=true&w=majority", 
 { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true })
+
     .then(() => console.log(`Mongo DB Succesfully Connected`))
     .catch(err => console.log(err));
 

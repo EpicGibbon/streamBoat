@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { useSelector, useDispatch } from "react-redux";
@@ -6,7 +5,7 @@ import { Button, Form, Message, Segment, Label } from 'semantic-ui-react';
 import { Field, reduxForm } from "redux-form";
 import { clearErrors } from "../actions/authActions";
 
-const RegisterForm = (props) => {
+const BandRegisterForm = (props) => {
     console.log(props);
     const error = useSelector(state => state.errors);
     const [errorMessage, setErrorMessage] = useState("");
@@ -26,36 +25,35 @@ const RegisterForm = (props) => {
             <Form onSubmit={props.handleSubmit(props.onSubmit)} size='large'>
                 <Segment>
                     <Field
-                        name="firstname"
+                        name="bandname"
                         component={renderInput}
-                        label="Enter First Name"
+                        label="Enter your band's name"
                     />
                     <Field
-                        name="lastname"
+                        bname="bandlocation"
                         component={renderInput}
-                        label="Enter Last name"
+                        label="Enter band's location"
                     />
                     <Field
-                        name="username"
+                        name="bandmembers"
                         component={renderInput}
-                        label="Username"
+                        label="List band members and position/intrsument"
                     />
                     <Field
-                        name="email"
+                        name="bandemail"
                         component={renderInput}
-                        label="E-mail address"
+                        label="E-mail address to contact band"
                     />
                     {errorMessage ? <Label className="alertMssg" basic color='red'>{errorMessage}</Label> : ""}
                     <Field
-                        name="password"
-                        component={renderInput}
-                        label="Password"
+                        name="bandgenre"
+                        component={multiInput}
+                        label="Pick genre(s) that most accurately define your band"
                     />
                     <Field
-                        name="favgenres"
-                        autoComplete="chrome-off"
-                        component={multiInput}
-                        label="genres"
+                        name="Band image"
+                        component={imageInput}
+                        label="Upload a profile image for your band"
                     />
                     <Button secondary fluid size='large'>
                         {props.buttonText}
@@ -69,7 +67,7 @@ const RegisterForm = (props) => {
     )
 }
 
-const renderInput = ({ input, label, meta }) => {
+const renderInput = ({ input, label }) => {
 
     const selectIcon = () => {
 
@@ -85,7 +83,7 @@ const renderInput = ({ input, label, meta }) => {
 
         <div className="field">
             <div className="ui fluid left icon input">
-                <input {...input} placeholder={label}  autoComplete="chrome-off" type={`${input.name !== "password" ? "text" : "password"}`} />
+                <input {...input} autoComplete="off" placeholder={label} type={`${input.name !== "password" ? "text" : "password"}`} />
                 <i aria-hidden="true" className={selectIcon()}></i>
             </div>
         </div>
@@ -144,6 +142,6 @@ const onRemove = (selectedList, selectedItem) => {
     )
 }
 
-export default reduxForm({
-    form: "registerform"
-})(RegisterForm)
+const imageInput = () => {
+    
+}
