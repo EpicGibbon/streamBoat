@@ -24,9 +24,7 @@ const RegisterForm = (props) => {
 
     return (
         <>
-
             <Form onSubmit={props.handleSubmit(props.onSubmit)} size='large'>
-
                 <Segment>
                     <Field
                         name="firstname"
