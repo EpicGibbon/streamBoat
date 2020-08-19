@@ -6,12 +6,6 @@ export default class AutoCompleteSearch extends React.Component {
 
     constructor(props) {
         super(props)
-        this.items = [
-            "Lil Wayne",
-            "Gunna",
-            "Lil Baby",
-            "Dababy"
-        ];
         this.state = {
             suggestions: [],
             text: '',
@@ -20,11 +14,12 @@ export default class AutoCompleteSearch extends React.Component {
     }
 
     onTextChanged = (e) => {
+        const {items} = this.props;
         const value = e.target.value;
         let suggestions = [];
         if (value.length > 0) {
             const regex = new RegExp(`^${value}`, 'i');
-            suggestions = this.items.sort().filter(v => regex.test(v));
+            suggestions = items.sort().filter(v => regex.test(v));
         }
         this.setState(() => ({ suggestions, text: value }));
     }

@@ -1,9 +1,4 @@
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import navlogo from '../images/navlogo.png'
 import { Button } from 'semantic-ui-react';
 import '../css/Herosection.css'
 
@@ -20,7 +15,7 @@ class Hero extends React.Component {
         // }
         return (
             <div className='hero-container'>
-                <video src="/videos/video-1.mp4" autoPlay loop />
+                <video src="/videos/video-1.mp4" autoPlay muted loop />
                 <h1>StreamBoat AWAITS!</h1>
                 <p>What are you waiting for?</p>
                 <div className="hero-btns">
