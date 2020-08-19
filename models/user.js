@@ -20,7 +20,11 @@ const UserSchema = new Schema({
     },
     username: {
         type: String,
-        require:true
-    }
+        require: true
+    },
+    favgenres: {
+        type: Array,
+        require: true
+}
 });
 module.exports = User = mongoose.model("user", UserSchema);

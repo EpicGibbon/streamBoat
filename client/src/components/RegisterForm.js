@@ -52,7 +52,7 @@ const RegisterForm = (props) => {
                         label="Password"
                     />
                     <Field
-                        name="genres"
+                        name="favgenres"
                         autoComplete="chrome-off"
                         component={multiInput}
                         label="genres"
