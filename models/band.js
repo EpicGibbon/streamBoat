@@ -20,7 +20,11 @@ const BandSchema = new Schema({
     }, 
     genre: {
         type: String,
-        require:true
+        require: true
+    },
+    images: {
+        type: Array,
+        require: false
     }
 });
 module.exports = Band = mongoose.model("band", BandSchema);

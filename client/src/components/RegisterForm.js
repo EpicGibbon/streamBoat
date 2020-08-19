@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-// import Multiselect from  'react-bootstrap-multiselect';
+import { Multiselect } from 'multiselect-react-dropdown';
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Form, Message, Segment, Label } from 'semantic-ui-react';
 import { Field, reduxForm } from "redux-form";
@@ -12,7 +12,6 @@ const RegisterForm = (props) => {
     const [errorMessage, setErrorMessage] = useState("");
 
     const dispatch = useDispatch();
-
     useEffect(() => {
 
         if (error.message) {
@@ -35,7 +34,7 @@ const RegisterForm = (props) => {
                         name="lastname"
                         component={renderInput}
                         label="Enter Last name"
-                    /> 
+                    />
                     <Field
                         name="username"
                         component={renderInput}
@@ -52,6 +51,12 @@ const RegisterForm = (props) => {
                         component={renderInput}
                         label="Password"
                     />
+                    <Field
+                        name="genres"
+                        autoComplete="chrome-off"
+                        component={multiInput}
+                        label="genres"
+                    />
                     <Button secondary fluid size='large'>
                         {props.buttonText}
                     </Button>
@@ -64,7 +69,7 @@ const RegisterForm = (props) => {
     )
 }
 
-const renderInput = ({ input, label }) => {
+const renderInput = ({ input, label, meta }) => {
 
     const selectIcon = () => {
 
@@ -80,10 +85,61 @@ const renderInput = ({ input, label }) => {
 
         <div className="field">
             <div className="ui fluid left icon input">
-                <input {...input} autoComplete="off" placeholder={label} type={`${input.name !== "password" ? "text" : "password"}`} />
+                <input {...input} placeholder={label}  autoComplete="chrome-off" type={`${input.name !== "password" ? "text" : "password"}`} />
                 <i aria-hidden="true" className={selectIcon()}></i>
             </div>
         </div>
+
+    )
+}
+
+const multiInput = ({input}) => {
+    let genres = [
+        { name: "rock" },
+        { name: "Hip-Hop" },
+        { name: "Country" },
+        { name: "EDM" },
+        { name: "Blue Grass" },
+//         "Blues","Classic Rock","Country","Dance","Disco","Funk","Grunge",
+//  "Hip-Hop","Jazz","Metal","New Age","Oldies","Other","Pop","R&B",
+//  "Rap","Reggae","Rock","Techno","Industrial","Alternative","Ska",
+//  "Death Metal","Pranks","Soundtrack","Euro-Techno","Ambient",
+//  "Trip-Hop","Vocal","Jazz+Funk","Fusion","Trance","Classical",
+//  "Instrumental","Acid","House","Game","Sound Clip","Gospel",
+//  "Noise","AlternRock","Bass","Soul","Punk","Space","Meditative",
+//  "Instrumental Pop","Instrumental Rock","Ethnic","Gothic",
+//  "Darkwave","Techno-Industrial","Electronic","Pop-Folk",
+//  "Eurodance","Dream","Southern Rock","Comedy","Cult","Gangsta",
+//  "Top 40","Christian Rap","Pop/Funk","Jungle","Native American",
+//  "Cabaret","New Wave","Psychadelic","Rave","Showtunes","Trailer",
+//  "Lo-Fi","Tribal","Acid Punk","Acid Jazz","Polka","Retro",
+//  "Musical","Rock & Roll","Hard Rock","Folk","Folk-Rock",
+//  "National Folk","Swing","Fast Fusion","Bebob","Latin","Revival",
+//  "Celtic","Bluegrass","Avantgarde","Gothic Rock","Progressive Rock",
+//  "Psychedelic Rock","Symphonic Rock","Slow Rock","Big Band",
+//  "Chorus","Easy Listening","Acoustic","Humour","Speech","Chanson",
+//  "Opera","Chamber Music","Sonata","Symphony","Booty Bass","Primus",
+//  "Porn Groove","Satire","Slow Jam","Club","Tango","Samba",
+//  "Folklore","Ballad","Power Ballad","Rhythmic Soul","Freestyle",
+//  "Duet","Punk Rock","Drum Solo","Acapella","Euro-House","Dance Hall"
+    ]
+const onSelect = (selectedList, selectedItem) => {
+input.onChange(selectedList)
+}
+const onRemove = (selectedList, selectedItem) => {
+    input.onChange(selectedList)
+}
+
+
+    return (
+        <Multiselect
+            options={genres} // Options to display in the dropdown
+            // selectedValues={this.state.selectedValue} // Preselected value to persist in dropdown
+            onSelect={onSelect} // Function will trigger on select event
+            onRemove={onRemove} // Function will trigger on remove event
+            displayValue="name" // Property name to display in the dropdown options
+            
+        />
 
     )
 }
