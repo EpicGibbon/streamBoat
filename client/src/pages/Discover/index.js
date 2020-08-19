@@ -8,11 +8,12 @@ import AutoCompleteSearch from '../../components/AutoCompleteSearch'
 function Discover(props) {
     return (
         <div>
-            <Hero title={props.title} />
+            <Hero />
             <Row lg={12}>
                 <Col md={2}>
+                    <div className="App-Component">
                     <AutoCompleteSearch />
-                    <p>Search results can show here</p>
+                    </div>
                 </Col>
                 <Col md={8} style={{ float: "right"}}>
                 <CarouselTile />

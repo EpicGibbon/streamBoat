@@ -2,9 +2,11 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import navlogo from '../images/navlogo.png'
-import login from '../images/login.jpg'
-import streamboat from '../images/streamboat.jpg'
+import RocknRoll from '../images/RocknRoll.jpg'
+import HipHop from '../images/HipHop.jpg'
+import CountryMusic from '../images/CountryMusic.png'
+import MetalMusic from '../images/MetalMusic.jpeg'
+import PopMusic from '../images/PopMusic.jpg'
 import { Container } from "semantic-ui-react";
 
 export default class CarouselTile extends Component {
@@ -28,70 +30,70 @@ export default class CarouselTile extends Component {
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={navlogo}
+                            src={RocknRoll}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={login}
+                            src={HipHop}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={streamboat}
+                            src={CountryMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={login}
+                            src={MetalMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={navlogo}
+                            src={PopMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={streamboat}
+                            src={MetalMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={navlogo}
+                            src={CountryMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={login}
+                            src={MetalMusic}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={navlogo}
+                            src={HipHop}
                             alt="First slide"
                         />
                     </div>
                     <div>
                         <img height={200} width={250}
                             className="d-block w-100 text-center"
-                            src={login}
+                            src={RocknRoll}
                             alt="First slide"
                         />
                     </div>
