@@ -8,7 +8,7 @@ import AutoCompleteSearch from '../../components/AutoCompleteSearch'
 function Discover(props) {
     return (
         <div>
-            <Hero title={props.title} />
+            <Hero />
             <Row lg={12}>
                 <Col md={2}>
                     <div className="App-Component">
