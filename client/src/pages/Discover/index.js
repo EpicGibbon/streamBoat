@@ -11,8 +11,9 @@ function Discover(props) {
             <Hero title={props.title} />
             <Row lg={12}>
                 <Col md={2}>
+                    <div className="App-Component">
                     <AutoCompleteSearch />
-                    <p>Search results can show here</p>
+                    </div>
                 </Col>
                 <Col md={8} style={{ float: "right"}}>
                 <CarouselTile />
