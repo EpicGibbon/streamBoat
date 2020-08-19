@@ -33,6 +33,5 @@ const artists = [{
     email: "Yelowolf@gmail.com",
     password: "123",
     username: "Yelawolf"
-
 }
 ]

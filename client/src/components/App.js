@@ -13,8 +13,7 @@ import NoMatch from "../pages/NoMatch";
 import Discover from '../pages/Discover';
 import BandPage from '../pages/BandPage';
 import Footer from '../components/Footer';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
+
 
 
 

@@ -1,6 +1,6 @@
 .AboutMe-container {
     background-color: hotpink;
-    float: left;
     width: 60%;
+    float: right;
     overflow: hidden;
 }

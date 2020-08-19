@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container'
 class BandMerch extends React.Component {
     render() {
         return (
-            <Container>
+            <Container style={{float: "left"}}>
                 <Row>
                     <Card className="col-sm-6 col-md-4 col-lg-3" style={{ width: '18rem' }}>
                         <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />

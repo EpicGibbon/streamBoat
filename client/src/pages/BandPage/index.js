@@ -11,7 +11,7 @@ class BandPage extends React.Component {
             <div>
                 <BandHeader />
                 <Row>
-                    <BandMerch md={5}/>
+                    <BandMerch md={3} style={{display: 'inline-block'}}/>
                 </Row>
                 <AboutMe />
             </div>
