@@ -6,13 +6,15 @@ import { useSelector } from "react-redux";
 export const UserDashboard = () => {
     // access to the currentUser property from the auth reducer state
     const user = useSelector(state => state.auth.currentUser);
-
+ const genres = JSON.stringify(user.favgenres)
+ console.log(genres);
     return (
         <>
             <Message className="message-container" size="huge" secondary="true">
                 <Header size="huge"> User Dashboard </Header>
                 <p>This is a Protected Route</p>
                 <p>Welcome {user ? user.username : ""}</p>
+                <p>Your music preferences: {user ? genres : ""}</p>
             </Message>
         </>
     )
