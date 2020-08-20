@@ -17,13 +17,17 @@ const BandSchema = new Schema({
     email: {
         type: String,
         require: true
-    }, 
+    },
     genre: {
         type: String,
         require: true
     },
     images: {
         type: Array,
+        require: false
+    },
+    description: {
+        type: String,
         require: false
     }
 });
