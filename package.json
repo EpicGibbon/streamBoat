@@ -10,7 +10,7 @@
     "install": "cd client && npm install",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
-    "seed": "node seeders/seed.js"
+    "seed": "node scripts/seedDB.js"
   },
   "repository": {
     "type": "git",

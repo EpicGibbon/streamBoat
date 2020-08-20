@@ -29,6 +29,15 @@ const BandSchema = new Schema({
     description: {
         type: String,
         require: false
+    },
+    createdby: {
+        type: String,
+        require: true
+    },
+    date: {
+        type: Date, default: Date.now
     }
 });
-module.exports = Band = mongoose.model("band", BandSchema);
+const Band = mongoose.model("Band", BandSchema);
+
+module.exports = Band;

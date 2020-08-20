@@ -1,7 +1,7 @@
 // const bcrypt = require("bcrypt");
 // const jwt = require("jsonwebtoken");
 // const config = require("../config");
-const Band = require("../models/band");
+const db = require("../models");
 
 module.exports = {
     findAll: function (req, res) {
