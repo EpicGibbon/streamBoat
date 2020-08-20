@@ -30,7 +30,7 @@ const BandRegisterForm = (props) => {
                         label="Enter your band's name"
                     />
                     <Field
-                        bname="bandlocation"
+                        name="bandlocation"
                         component={renderInput}
                         label="Enter band's location"
                     />
