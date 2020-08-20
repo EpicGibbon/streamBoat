@@ -13,6 +13,7 @@ import NoMatch from "../pages/NoMatch";
 import Discover from '../pages/Discover';
 import BandPage from '../pages/BandPage';
 import Footer from '../components/Footer';
+import RegisterBand from '../pages/RegisterBand';
 
 
 
@@ -34,6 +35,7 @@ export const App = () => {
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
                     <Route path="/Discover" exact component={Discover}/>
+                    <PrivateRoute path="/registerBand" exact component={RegisterBand}/>
                     <PrivateRoute path="/BandPage" exact component={BandPage}/>
                     <PrivateRoute path="/dashboard" component={UserDashboard} />
                     <Route component={NoMatch} />
