@@ -12,17 +12,17 @@ export default {
         return axios.get("/auth/user", headers)
     },
     //Get all artists
-    getArtists: function() {
+    getBands: function() {
         return axios.get("/api/artists")
     },
     //Get the artists with a specific ID
-    getArtist: function(id) {
+    getBand: function(id) {
         return axios.get("/api/artists/" + id)
     },
-    deleteArtist: function(id) {
+    deleteBand: function(id) {
         return axios.delete("/api/artist/" + id);
     },
-    saveArtist: function(artistData) {
+    saveBand: function(artistData) {
         return axios.post("/api/artists", artistData)
     }
 }
