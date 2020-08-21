@@ -14,6 +14,9 @@ export default {
     //Get all artists
     getBands: function() {
         return axios.get("/api/artists")
+    }, 
+    getUserArtists: function(userid) {
+        return axios.get("/api/user/artists/" + userid)
     },
     //Get the artists with a specific ID
     getBand: function(id) {

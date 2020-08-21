@@ -13,4 +13,7 @@ router
   .put(bandController.update)
   .delete(bandController.remove);
 
+  router
+  .route("/user/artists/:userid")
+  .get(bandController.findByUserId);
 module.exports = router;
