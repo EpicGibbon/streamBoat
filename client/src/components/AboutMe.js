@@ -21,10 +21,16 @@ function AboutMe() {
     //loads all artists and sets them to artists
     function loadArtists() {
         API.getArtists()
-            .then(res =>
-                setArtists(res.data)
+            .then((res) => {
+                console.log(res);
+                res.data.forEach(band => {
+                    setArtists(band)
+                    console.log(artists);
+                });
+                
+            }    
             )
-            .catch(err => console.log(err));
+            .catch(err => console.log(err)); 
     }
 
 
@@ -43,9 +49,8 @@ function AboutMe() {
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Genre</Form.Label>
                                 <Form.Control name="Genre" onChange={() => { }} placeholder="Genre" />
-                                <Button variant="primary" onClick={(e) => {
-                                    console.log(e.target.value);
-                                }}>
+                                <Button variant="primary" onClick={loadArtists}
+                                >
                                     Submit
                         </Button>
                             </Form.Group>
@@ -56,9 +61,10 @@ function AboutMe() {
                     <Jumbotron>
                         <h1>Search results:</h1>
                     </Jumbotron>
-                    {artists.length ? (
+                    {/* {artists.length ? ( */}
                         <ul>
-                            {artists.map(artist => {
+                            <li>{artists.bandname}</li>
+                            {/* {artists.map(artist => {
                                 return (
                                     <p key={artist._id}>
                                         <a href={"/artists/" + artist.id}>
@@ -68,11 +74,11 @@ function AboutMe() {
                                         </a>
                                     </p>
                                 );
-                            })}
+                            })} */}
                         </ul>
-                    ) : (
-                            <h3>no results to display</h3>
-                        )}
+                {/* //     ) : ( */}
+                             <h3>no results to display</h3>
+                {/* //         )} */}
                 </Col>
             </Row>
         </Container>
