@@ -2,13 +2,13 @@ const router = require("express").Router();
 const bandController = require("../controllers/bandController");
 
 // Matches with "/api/books"
-router.route("/")
+router.route("/artists")
   .get(bandController.findAll)
   .post(bandController.create);
 
 // Matches with "/api/books/:id"
 router
-  .route("/:id")
+  .route("/artist/:id")
   .get(bandController.findById)
   .put(bandController.update)
   .delete(bandController.remove);
