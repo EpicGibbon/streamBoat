@@ -22,10 +22,15 @@ function AboutMe() {
     function loadArtists() {
         API.getArtists()
             .then((res) => {
-                console.log(res);
+                const bandarray = [];
+                
+                console.log(res.data);
                 res.data.forEach(band => {
-                    setArtists(band)
+                    bandarray.push(band.name);
+                    console.log(bandarray);
+                    setArtists(bandarray);
                     console.log(artists);
+                    ;
                 });
                 
             }    

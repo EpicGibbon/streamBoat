@@ -35,6 +35,12 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+    },
+    findByUserId: function (req, res) {
+        db.Band
+        .find({createdby: req.params.userid})
+        .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     }
 }
 
