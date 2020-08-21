@@ -1,12 +1,22 @@
 import React from 'react';
 import { Header } from 'semantic-ui-react';
 import BandRegisterForm from "../../components/BandRegisterForm";
+import { useSelector } from "react-redux";
+import API from '../../utils/API';
 
 const RegisterBand = () => {
 
+    const user = useSelector(state => state.auth.currentUser);
     const onFormSubmit = (formVal) => {
         console.log(formVal);
+        const creator = user._id;
+        formVal.createdby = creator;
         // call in api function to post band info to db from formval
+        API.saveArtist(formVal)
+        .then(() => {
+            console.log("succes!");
+            
+        })
     }
 
     return (

@@ -55,6 +55,11 @@ const BandRegisterForm = (props) => {
                         component={imageInput}
                         label="Upload a profile image for your band"
                     /> */}
+                    <Field
+                        name="description"
+                        component={renderInput}
+                        label="Tell us your bands story.. or not"
+                    />
                     <Button secondary fluid size='large'>
                         {props.buttonText}
                     </Button>

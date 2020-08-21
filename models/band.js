@@ -6,26 +6,26 @@ const BandSchema = new Schema({
         type: String,
         require: true
     },
-    location: {
+    bandlocation: {
         type: String,
         require: true
     },
-    members: {
+    bandmembers: {
+        type: String,
+        require: true
+    },
+    bandemail: {
+        type: String,
+        require: true
+    },
+    bandgenre: {
         type: Array,
         require: true
     },
-    email: {
-        type: String,
-        require: true
-    },
-    genre: {
-        type: String,
-        require: true
-    },
-    images: {
-        type: Array,
-        require: false
-    },
+    // images: {
+    //     type: Array,
+    //     require: false
+    // },
     description: {
         type: String,
         require: false
