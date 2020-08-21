@@ -7,12 +7,11 @@ import Button from 'react-bootstrap/Button'
 import Container from 'react-bootstrap/Container'
 import Col from 'react-bootstrap/Col'
 import '../css/AboutMeContainer.css'
+import DeleteBtn from '../components/DeleteBtn'
 
 function AboutMe() {
 
     const [artists, setArtists] = useState([])
-    const [formObject, setFormObject] = useState({})
-
     //load all the artists and store them with setArtists
     useEffect(() => {
         loadArtists()
@@ -20,7 +19,7 @@ function AboutMe() {
 
     //loads all artists and sets them to artists
     function loadArtists() {
-        API.getArtists()
+        API.getBands()
             .then((res) => {
                 console.log(res);
                 res.data.forEach(band => {
@@ -33,7 +32,12 @@ function AboutMe() {
             .catch(err => console.log(err)); 
     }
 
-
+//       Deletes a book from the database with a given id, then reloads books from the db
+  function deleteArtists(id) {
+    API.deleteArtists(id)
+      .then(res => loadArtists())
+      .catch(err => console.log(err));
+  }
 
     return (
         <Container fluid>
@@ -64,6 +68,7 @@ function AboutMe() {
                     {/* {artists.length ? ( */}
                         <ul>
                             <li>{artists.bandname}</li>
+                            <DeleteBtn onClick={() => deleteArtists(artists._id)} />
                             {/* {artists.map(artist => {
                                 return (
                                     <p key={artist._id}>
