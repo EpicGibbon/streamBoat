@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const db = require("../models");
 
 //This file empties the Bands collection and inserts the bands below
+console.log(db.Band);
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -58,9 +59,7 @@ const bandSeed = [
     },
 ];
 
-db.Band
-    // .remove({})
-    .then(() => db.Band.collection.insertMany(bandSeed))
+db.Band.collection.insertMany(bandSeed)
     .then(data => {
         console.log(data.result.n + "records inserted!");
         process.exit(0);
