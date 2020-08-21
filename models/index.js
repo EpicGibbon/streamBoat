@@ -1,7 +1,4 @@
 module.exports = {
-    Band: require("./band")
-  };
-
-module.exports = {
+    Band: require("./band"),
     User: require("./user")
-};
+  };

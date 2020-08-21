@@ -32,12 +32,12 @@ const BandSchema = new Schema({
     },
     createdby: {
         type: String,
-        require: true
+        require: false
     },
     date: {
         type: Date, default: Date.now
     }
 });
-const Band = mongoose.model("Band", BandSchema);
+const Band = mongoose.model("band", BandSchema);
 
 module.exports = Band;
