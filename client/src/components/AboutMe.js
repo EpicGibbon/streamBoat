@@ -22,7 +22,7 @@ function AboutMe() {
         API.getBands()
             .then((res) => {
                 const bandarray = [];
-                
+
                 console.log(res.data);
                 res.data.forEach(band => {
                     bandarray.push(band.name);
@@ -31,18 +31,18 @@ function AboutMe() {
                     console.log(artists);
                     ;
                 });
-                
-            }    
+
+            }
             )
-            .catch(err => console.log(err)); 
+            .catch(err => console.log(err));
     }
 
-//       Deletes a book from the database with a given id, then reloads books from the db
-  function deleteArtists(id) {
-    API.deleteArtists(id)
-      .then(res => loadArtists())
-      .catch(err => console.log(err));
-  }
+    //       Deletes a book from the database with a given id, then reloads books from the db
+    function deleteArtists(id) {
+        API.deleteArtists(id)
+            .then(res => loadArtists())
+            .catch(err => console.log(err));
+    }
 
     return (
         <Container fluid>
@@ -71,10 +71,10 @@ function AboutMe() {
                         <h1>Search results:</h1>
                     </Jumbotron>
                     {/* {artists.length ? ( */}
-                        <ul>
-                            <li>{artists.bandname}</li>
-                            <DeleteBtn onClick={() => deleteArtists(artists._id)} />
-                            {/* {artists.map(artist => {
+                    <ul>
+                        <li>{artists.bandname}</li>
+                        <DeleteBtn onClick={() => deleteArtists(artists._id)} />
+                        {/* {artists.map(artist => {
                                 return (
                                     <p key={artist._id}>
                                         <a href={"/artists/" + artist.id}>
@@ -85,10 +85,10 @@ function AboutMe() {
                                     </p>
                                 );
                             })} */}
-                        </ul>
-                {/* //     ) : ( */}
-                             <h3>no results to display</h3>
-                {/* //         )} */}
+                    </ul>
+                    {/* //     ) : ( */}
+                    <h3>no results to display</h3>
+                    {/* //         )} */}
                 </Col>
             </Row>
         </Container>
