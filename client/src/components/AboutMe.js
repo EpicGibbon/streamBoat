@@ -18,7 +18,7 @@ function AboutMe() {
     }, [])
 
     //loads all artists and sets them to artists
-    function loadArtists() {
+    const loadArtists = () => {
         API.getBands()
             .then((res) => {
                 const bandarray = [];

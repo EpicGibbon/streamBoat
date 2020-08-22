@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-    // API request to server side 
+    // ===========API request to server side login/register===========
     register(data) {
         return axios.post("/auth/register", data)
     },
@@ -11,14 +11,15 @@ export default {
     loadUser(headers) {
         return axios.get("/auth/user", headers)
     },
-    //Get all artists
+
+
+    //===========Band requests=========
     getBands: function() {
         return axios.get("/api/artists")
     }, 
     getUserArtists: function(userid) {
         return axios.get("/api/user/artists/" + userid)
     },
-    //Get the artists with a specific ID
     getBand: function(id) {
         return axios.get("/api/artists/" + id)
     },
@@ -27,5 +28,14 @@ export default {
     },
     saveBand: function(artistData) {
         return axios.post("/api/artists", artistData)
+    },
+
+    // =========Band/User Edit========
+    editUser: function(userid){
+        return axios.put("/api/user/edit/" + userid)
+    },
+    editBand: function(bandid){
+        return axios.put("api/artist/edit/" + bandid)
     }
+
 }
