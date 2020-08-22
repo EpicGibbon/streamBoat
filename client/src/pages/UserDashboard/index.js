@@ -16,7 +16,13 @@ export const UserDashboard = () => {
         API.getUserArtists(user._id)
             .then((res) => {
                 console.log(res.data);
-                
+                return (
+                    <ul>
+{res.data.map()}
+
+                    </ul>
+                )
+
             });
 
     }
@@ -33,10 +39,22 @@ export const UserDashboard = () => {
                     <Button color="black" animated secondary>
                         <Button.Content visible>Register Band</Button.Content>
                     </Button>
-                    <Button color="black" onClick={getBands} animated secondary>
-                        <Button.Content visible>Get Band</Button.Content>
+                </Link>
+                <Button color="black" onClick={getBands} animated secondary>
+                    <Button.Content visible>Get Band</Button.Content>
+
+                </Button>
+                <Link to="/editProfile">
+                    <Button color="black" animated secondary>
+                        <Button.Content visible>Edit your Profile</Button.Content>
                     </Button>
                 </Link>
+                {/* <Link to="/editBand">
+                    <Button color="black" animated secondary>
+                        <Button.Content visible>Edit your Band</Button.Content>
+                    </Button>
+                </Link> */}
+
             </Message>
         </>
     )
