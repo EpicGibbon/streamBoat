@@ -12,7 +12,7 @@ const RegisterBand = () => {
         const creator = user._id;
         formVal.createdby = creator;
         // call in api function to post band info to db from formval
-        API.saveArtist(formVal)
+        API.saveBand(formVal)
         .then(() => {
             console.log("succes!");
             
