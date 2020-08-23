@@ -5,6 +5,7 @@ import API from '../../utils/API';
 
 
 
+
 function EditBand() {
 
     const [band, setBand] = useState([])
@@ -23,9 +24,9 @@ function EditBand() {
                 setBand(res.data)
             )
             .catch(err => console.log(err));
+
     }
-
-
+  
     function handleFormSubmit(e) {
         e.preventDefault();
         console.log(formVal);
