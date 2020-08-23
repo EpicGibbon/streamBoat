@@ -9,7 +9,7 @@ const EditBand = () => {
 
     const onFormSubmit = (formVal) => {
         console.log(formVal);
-        API.editBand()
+        API.editBand(formVal._id, formVal)
     }
 
     return (
