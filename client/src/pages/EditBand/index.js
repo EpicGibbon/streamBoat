@@ -24,11 +24,10 @@ function EditBand() {
                 setBand(res.data)
             )
             .catch(err => console.log(err));
-
     }
   
-    function handleFormSubmit(e) {
-        e.preventDefault();
+    function handleFormSubmit(formVal) {
+        // e.preventDefault();
         console.log(formVal);
         API.editBand({
             bandname: formObject.bandname,
