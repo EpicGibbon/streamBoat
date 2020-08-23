@@ -16,12 +16,12 @@ export const UserDashboard = () => {
         API.getUserArtists(user._id)
             .then((res) => {
                 console.log(res.data);
-                return (
-                    <ul>
-{res.data.map()}
+//                 return (
+//                     <ul>
+// {res.data.map()}
 
-                    </ul>
-                )
+//                     </ul>
+//                 )
 
             });
 

@@ -16,12 +16,7 @@ import Footer from '../components/Footer';
 import RegisterBand from '../pages/RegisterBand';
 import EditProfile from '../pages/EditProfile';
 import EditBand from '../pages/EditBand';
-
 import '../css/FooterContainer.css'
-import EditBand from '../pages/EditBand';
-
-
-
 
 export const App = () => {
 

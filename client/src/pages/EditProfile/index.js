@@ -11,6 +11,9 @@ const EditProfile = () => {
         console.log(formVal);
         API.editUser()
     }
+    const renderMessage = () => {
+        console.log("YO");
+    }
 
     return (
 
@@ -19,6 +22,7 @@ const EditProfile = () => {
                 Edit Account info
             </Header>
             <RegisterForm
+            renderMessage={renderMessage}
                 buttonText="Save Changes"
                 onSubmit={onFormSubmit}
             />
