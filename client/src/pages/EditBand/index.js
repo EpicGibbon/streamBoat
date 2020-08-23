@@ -1,16 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from 'semantic-ui-react';
 import RegisterForm from "../../components/RegisterForm";
-import { Link } from "react-router-dom";
 import API from '../../utils/API';
 
 
-const EditBand = () => {
 
-    const onFormSubmit = (formVal) => {
-        console.log(formVal);
-        API.editBand(formVal._id, formVal)
+
+function EditBand() {
+
+    const [band, setBand] = useState([])
+    const [formObject, setFormObject] = useState({
+        bandname: "",
+        location: "",
+        email: "",
+        genre: "",
+        desciption: "",
+
+    })
+
+    function loadBand() {
+        API.getBand()
+            .then(res =>
+                setBand(res.data)
+            )
+            .catch(err => console.log(err));
+
     }
+  
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        console.log(formVal);
+        API.editBand({
+            bandname: formObject.bandname,
+            location: formObject.location,
+            email: formObject.email,
+            genre: formObject.genre,
+            desciption: formObject.desciption
+        })
+            .then(() => setFormObject({
+                bandname: "",
+                location: "",
+                email: "",
+                genre: "",
+                desciption: "",
+            }))
+            .then(() => loadBand())
+            .catch(err => console.log(err))
+    };
 
     return (
 
@@ -20,7 +56,7 @@ const EditBand = () => {
             </Header>
             <RegisterForm
                 buttonText="Save Changes"
-                onSubmit={onFormSubmit}
+                onClick={handleFormSubmit()}
             />
         </div>
     )
