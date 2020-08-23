@@ -25,7 +25,7 @@ module.exports = {
     },
     update: function (req, res) {
         db.Band
-            .findOneAndUpdate({ _id: req.params.id }, req.body)
+            .findOneAndUpdate({ createdby: req.params._id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
@@ -38,7 +38,7 @@ module.exports = {
     },
     findByUserId: function (req, res) {
         db.Band
-        .find({createdby: req.params.userid})
+        .find({createdby: req.params._id})
         .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }

@@ -3,13 +3,16 @@ import { Header } from 'semantic-ui-react';
 import RegisterForm from "../../components/RegisterForm";
 import { Link } from "react-router-dom";
 import API from '../../utils/API';
-
+import { useSelector } from "react-redux";
 
 const EditProfile = () => {
-
+    const user = useSelector(state => state.auth.currentUser);
     const onFormSubmit = (formVal) => {
         console.log(formVal);
-        API.editUser()
+        API.editUser(user._id, formVal)
+        .then(() => {
+            console.log("Yo you updated");
+        })
     }
     const renderMessage = () => {
         console.log("YO");
