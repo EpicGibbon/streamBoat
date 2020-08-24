@@ -38,8 +38,13 @@ module.exports = {
     },
     findByUserId: function (req, res) {
         db.Band
-        .find({createdby: req.params._id})
-        .then(dbModel => res.json(dbModel))
+            .find({ createdby: req.params._id })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    editUser: function (req, res) {
+        db.User.find({ _id: req.params._id })
+            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
     editUser: function (req, res) {
