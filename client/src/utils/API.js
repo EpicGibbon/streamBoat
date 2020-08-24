@@ -35,7 +35,7 @@ export default {
         return axios.put("/api/user/edit/" + userid)
     },
     editBand: function(bandid){
-        return axios.put("api/artist/edit/" + bandid)
+        return axios.put("api/artist/" + bandid)
     }
 
 }
