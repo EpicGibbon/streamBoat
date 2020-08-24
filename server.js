@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 // || "mongodb+srv://CamGram:camg1023@cluster0.hqiad.mongodb.net/sboat?retryWrites=true&w=majority",
 // connect to Mongo DB 
 
-mongoose.connect(config.MONGO_URI || "mongodb+srv://CamGram:camg1023@cluster0.hqiad.mongodb.net/sboat?retryWrites=true&w=majority", 
+mongoose.connect(config.MONGO_URI || "mongodb://epicgibbon:rootroot1@ds149616.mlab.com:49616/heroku_q63rw0x5", 
 { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: true })
 
     .then(() => console.log(`Mongo DB Succesfully Connected`))

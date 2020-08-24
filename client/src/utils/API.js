@@ -36,6 +36,9 @@ export default {
     },
     editBand: function(bandid){
         return axios.put("api/artist/" + bandid)
+    },
+    //This is the search method to return specific bands per the users input
+    searchBand: function(artist){
+        return axios.get("/api/artists/" + artist)
     }
-
 }

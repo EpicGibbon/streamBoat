@@ -58,6 +58,13 @@ module.exports = {
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
+    },
+    //This method is being called in the API routes
+    searchBand: function(req, res) {
+        db.Band
+        .findAll({ bandname: req.params.artist })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     }
 }
 
