@@ -25,11 +25,11 @@ module.exports = {
     },
     update: function (req, res) {
         db.Band
-            .findOneAndUpdate({ createdby: req.params._id }, req.body)
+            .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    remove: function (req, res) {
+    removeBand: function (req, res) {
         db.Band
             .findById({ _id: req.params.id })
             .then(dbModel => dbModel.remove())
@@ -44,6 +44,18 @@ module.exports = {
     },
     editUser: function (req, res) {
         db.User.find({ _id: req.params._id })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    editUser: function (req, res) {
+        db.User.findOneAndUpdate({ _id: req.params.id }, req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    removeUser: function (req, res) {
+        db.User
+            .findById({ _id: req.params.id })
+            .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }

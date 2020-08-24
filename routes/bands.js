@@ -11,12 +11,14 @@ router
   .route("/artist/:id")
   .get(bandController.findById)
   .put(bandController.update)
-  .delete(bandController.remove);
+  .delete(bandController.removeBand);
 
   router
   .route("/user/artists/:userid")
   .get(bandController.findByUserId);
 
-  router.route("/user/edit/:userid")
+  router
+  .route("/user/edit/:id")
   .put(bandController.editUser)
+  .delete(bandController.removeUser);
 module.exports = router;
