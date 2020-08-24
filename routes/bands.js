@@ -16,4 +16,7 @@ router
   router
   .route("/user/artists/:userid")
   .get(bandController.findByUserId);
+
+  router.route("/user/edit/:userid")
+  .put(bandController.editUser)
 module.exports = router;
