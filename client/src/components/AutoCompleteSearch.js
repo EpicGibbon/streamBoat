@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/AutoCompleteText.css';
+import API from '../utils/API'
 
 export default class AutoCompleteSearch extends React.Component {
 
@@ -9,7 +10,6 @@ export default class AutoCompleteSearch extends React.Component {
         this.state = {
             suggestions: [],
             text: '',
-
         }
     }
 
@@ -28,8 +28,14 @@ export default class AutoCompleteSearch extends React.Component {
         this.setState(() => ({
             text: value,
             suggestions: [],
-
         }))
+        console.log(this.state.text);
+        API.searchband(this.state.text)
+        .then((res) => {
+            this.setState(() => ({
+                suggestions: res
+            }))
+        })
     }
 
     renderSuggestions() {

@@ -6,6 +6,9 @@ router.route("/artists")
   .get(bandController.findAll)
   .post(bandController.create);
 
+  router.route("/artists/:artist")
+  .get(bandController.searchBand)
+
 // Matches with "/api/books/:id"
 router
   .route("/artist/:id")
@@ -21,4 +24,6 @@ router
   .route("/user/edit/:id")
   .put(bandController.editUser)
   .delete(bandController.removeUser);
+
+  
 module.exports = router;
