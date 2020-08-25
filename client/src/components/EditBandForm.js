@@ -30,14 +30,14 @@ const EditBandForm = (props) => {
                 console.log(bands);
 
                 return (
-                    <div>
-                        <ul>
-                        {/* {bands.map(band => <li key={band.bandname}>{band.bandname}</li>
-                        )} */}
-                        <li>HEY</li>
-                        </ul>
-                    </div>
-
+                    // <div>
+                    //     <ul>
+                    //     {/* {bands.map(band => <li key={band.bandname}>{band.bandname}</li>
+                    //     )} */}
+                    //     <li>HEY</li>
+                    //     </ul>
+                    // </div>
+bands
                 )
             })
     }
@@ -79,27 +79,27 @@ const EditBandForm = (props) => {
                     <Field
                         name="bandname"
                         component={renderInput}
-                        label={user.firstname}
+                        label="Change band name"
                     />
                     <Field
                         name="bandlocation"
                         component={renderInput}
-                        label={user.lastname}
+                        label="Change band location"
                     />
                     <Field
                         name="bandmembers"
                         component={renderInput}
-                        label={user.username}
+                        label="Update band members"
                     />
                     <Field
                         name="bandemail"
                         component={renderInput}
-                        label={user.email}
+                        label="Change band contact email"
                     />
                       <Field
                         name="description"
                         component={renderInput}
-                        label={user.email}
+                        label="Edit band description"
                     />
                     {errorMessage ? <Label className="alertMssg" basic color='red'>{errorMessage}</Label> : ""}
                     <Field
