@@ -25,5 +25,8 @@ router
   .put(bandController.editUser)
   .delete(bandController.removeUser);
 
-  
+  router
+  .route("/genres/:genre")
+  .get(bandController.searchGenre)
+
 module.exports = router;
