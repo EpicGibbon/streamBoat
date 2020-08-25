@@ -57,9 +57,9 @@ const RegisterForm = (props) => {
                         component={multiInput}
                         label="genres"
                     />
-                    <Button secondary fluid size='large'>
-                        {props.buttonText}
-                    </Button>
+                        <Button secondary fluid size='large'>
+                            {props.buttonText}
+                        </Button>
                 </Segment>
             </Form>
             <Message>
@@ -85,7 +85,7 @@ const renderInput = ({ input, label, meta }) => {
 
         <div className="field">
             <div className="ui fluid left icon input">
-                <input {...input} placeholder={label}  autoComplete="chrome-off" type={`${input.name !== "password" ? "text" : "password"}`} />
+                <input {...input} placeholder={label} autoComplete="chrome-off" type={`${input.name !== "password" ? "text" : "password"}`} />
                 <i aria-hidden="true" className={selectIcon()}></i>
             </div>
         </div>
@@ -93,7 +93,7 @@ const renderInput = ({ input, label, meta }) => {
     )
 }
 
-const multiInput = ({input}) => {
+const multiInput = ({ input }) => {
     let genres = [
         { name: "Rock" }, { name: "Hip-Hop" }, { name: "Country" }, { name: "EDM" }, { name: "Blue Grass" },
         { name: "Blues" }, { name: "Classic Rock" }, { name: "Dance" }, { name: "Disco" }, { name: "Funk" }, { name: "Grunge" },
@@ -103,12 +103,12 @@ const multiInput = ({input}) => {
         { name: "Instrumental" }, { name: "House" }, { name: "Gospel" }, { name: "Bass" }, { name: "Soul" }, { name: "Punk" }, { name: "Gothic" }, { name: "Electronic" },
         { name: "Tribal" }, { name: "Polka" }, { name: "Retro" }, { name: "HardRock" }, { name: "Folk" }, { name: "Tribal" }, { name: "Swing" }, { name: "Latin" }, { name: "Bluegrass" }, { name: "Celtic" }, { name: "Big Band" }, { name: "Slow Rock" }, { name: "Speech" }, { name: "Booty Bass" }, { name: "Tango" }, { name: "Samba" }, { name: "Duet" }, { name: "Punk Rock" }
     ]
-const onSelect = (selectedList, selectedItem) => {
-input.onChange(selectedList)
-}
-const onRemove = (selectedList, selectedItem) => {
-    input.onChange(selectedList)
-}
+    const onSelect = (selectedList, selectedItem) => {
+        input.onChange(selectedList)
+    }
+    const onRemove = (selectedList, selectedItem) => {
+        input.onChange(selectedList)
+    }
 
 
     return (
@@ -118,7 +118,7 @@ const onRemove = (selectedList, selectedItem) => {
             onSelect={onSelect} // Function will trigger on select event
             onRemove={onRemove} // Function will trigger on remove event
             displayValue="name" // Property name to display in the dropdown options
-            
+
         />
 
     )

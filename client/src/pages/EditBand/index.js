@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
 import { Header } from 'semantic-ui-react';
-import RegisterForm from "../../components/RegisterForm";
+import EditBandForm from "../../components/EditBandForm";
 import API from '../../utils/API';
 
-
-
-
-function EditBand() {
+const EditBand = () => {
 
     const [band, setBand] = useState([])
     const [formObject, setFormObject] = useState({
         bandname: "",
-        location: "",
-        email: "",
-        genre: "",
-        desciption: "",
-
+        bandlocation: "",
+        bandmembers: "",
+        bandemail: "",
+        bandgenre: [],
+        description: "",
     })
 
     function loadBand() {
@@ -53,9 +50,9 @@ function EditBand() {
             <Header as='h2' secondary="true" textAlign='center'>
                 Edit Band info
             </Header>
-            <RegisterForm
+            <EditBandForm
                 buttonText="Save Changes"
-                onClick={handleFormSubmit()}
+                onSubmit={handleFormSubmit}
             />
         </div>
     )
