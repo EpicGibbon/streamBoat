@@ -34,6 +34,6 @@
     "multiselect-react-dropdown": "^1.5.7",
     "react-bootstrap": "^1.3.0",
     "react-slick": "^0.27.8",
-    "slick-carousel": "^1.8.1"  
+    "slick-carousel": "^1.8.1"
   }
 }
