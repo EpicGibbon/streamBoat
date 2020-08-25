@@ -3,6 +3,7 @@ import { Header } from 'semantic-ui-react';
 import BandRegisterForm from "../../components/BandRegisterForm";
 import { useSelector } from "react-redux";
 import API from '../../utils/API';
+import history from '../../history'
 
 const RegisterBand = () => {
 
@@ -18,7 +19,7 @@ const RegisterBand = () => {
         API.saveBand(formVal)
         .then(() => {
             console.log("succes!");
-            
+            history.push('/BandPage');
         })
     }
 
