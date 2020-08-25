@@ -1,8 +1,7 @@
 import React from 'react'
-import CarouselHome from '../../components/CarouselHome'
 import Hero from '../../components/Hero'
-import AboutSBoat from '../../components/AboutSBoat'
 import Services from '../../components/Services'
+import DiscoverSearch from '../../components/DiscoverSearch'
 
 class Home extends React.Component {
     render() {
@@ -10,8 +9,7 @@ class Home extends React.Component {
             <div>
                 <Hero />
                 <Services />
-                <CarouselHome />
-                <AboutSBoat />
+                <DiscoverSearch />
             </div>
         )
     }
