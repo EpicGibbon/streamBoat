@@ -31,7 +31,6 @@ function AboutMe() {
                     console.log(artists);
                     ;
                 });
-
             }
             )
             .catch(err => console.log(err));

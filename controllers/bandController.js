@@ -62,7 +62,7 @@ module.exports = {
     //This method is being called in the API routes
     searchBand: function(req, res) {
         db.Band
-        .findAll({ bandname: req.params.artist })
+        .find({ bandname: req.params.artist })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }
