@@ -6,7 +6,7 @@ return (
     <section className="page-section" id="services">
     <div className="container">
         <div className="text-center">
-            <h2 className="section-heading text-white text-uppercase">Why StreamBoat?</h2>
+            <h2 className="section-heading text-white text-uppercase">Why Bands&Notes?</h2>
             <h3 className="section-subheading text-muted">Just some of the awesome benefits:</h3>
         </div>
         <br />
@@ -33,7 +33,7 @@ return (
                     <i className="fas fa-wrench fa-stack-1x fa-inverse"></i>
                 </span>
                 <h4 className="my-3 text-white">Constant Improvment</h4>
-                <p className="text-muted">Here at StreamBoat we are dedicated to providing a great user experience. In order to fulfill that we are here providing constant maintance and updates.</p>
+                <p className="text-muted">Here at Bands&Notes we are dedicated to providing a great user experience. In order to fulfill that we are here providing constant maintance and updates.</p>
             </div>
         </div>
     </div>
