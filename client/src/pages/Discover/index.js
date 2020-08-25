@@ -3,25 +3,17 @@ import Hero from '../../components/Hero';
 import CarouselTile from '../../components/CarouselTile'
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
-import AutoCompleteSearch from '../../components/AutoCompleteSearch'
+import DiscoverSearch from '../../components/DiscoverSearch'
 import API from '../../utils/API';
 import { Button } from 'semantic-ui-react';
 
 function Discover(props) {
 
     return (
-        <div>
-            <Hero />
-            <Row lg={12}>
-                <Col md={2}>
-                    <div className="App-Component">
-                        <AutoCompleteSearch />
-                    </div>
-                </Col>
-                <Col md={8} style={{ float: "right" }}>
-                    <CarouselTile />
-                </Col>
-            </Row>
+       <div>
+            {/* <Hero /> */}
+            <DiscoverSearch />
+            {/* <CarouselTile /> */}
         </div>
     )
 }
