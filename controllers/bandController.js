@@ -65,6 +65,12 @@ module.exports = {
         .find({ bandname: req.params.artist })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+    },
+    searchGenre: function(req, res) {
+        db.Band
+        .find({ "bandgenre.name": req.params.genre })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     }
 }
 

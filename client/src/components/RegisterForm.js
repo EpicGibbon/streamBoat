@@ -95,33 +95,13 @@ const renderInput = ({ input, label, meta }) => {
 
 const multiInput = ({ input }) => {
     let genres = [
-        { name: "rock" },
-        { name: "Hip-Hop" },
-        { name: "Country" },
-        { name: "EDM" },
-        { name: "Blue Grass" },
-        //         "Blues","Classic Rock","Country","Dance","Disco","Funk","Grunge",
-        //  "Hip-Hop","Jazz","Metal","New Age","Oldies","Other","Pop","R&B",
-        //  "Rap","Reggae","Rock","Techno","Industrial","Alternative","Ska",
-        //  "Death Metal","Pranks","Soundtrack","Euro-Techno","Ambient",
-        //  "Trip-Hop","Vocal","Jazz+Funk","Fusion","Trance","Classical",
-        //  "Instrumental","Acid","House","Game","Sound Clip","Gospel",
-        //  "Noise","AlternRock","Bass","Soul","Punk","Space","Meditative",
-        //  "Instrumental Pop","Instrumental Rock","Ethnic","Gothic",
-        //  "Darkwave","Techno-Industrial","Electronic","Pop-Folk",
-        //  "Eurodance","Dream","Southern Rock","Comedy","Cult","Gangsta",
-        //  "Top 40","Christian Rap","Pop/Funk","Jungle","Native American",
-        //  "Cabaret","New Wave","Psychadelic","Rave","Showtunes","Trailer",
-        //  "Lo-Fi","Tribal","Acid Punk","Acid Jazz","Polka","Retro",
-        //  "Musical","Rock & Roll","Hard Rock","Folk","Folk-Rock",
-        //  "National Folk","Swing","Fast Fusion","Bebob","Latin","Revival",
-        //  "Celtic","Bluegrass","Avantgarde","Gothic Rock","Progressive Rock",
-        //  "Psychedelic Rock","Symphonic Rock","Slow Rock","Big Band",
-        //  "Chorus","Easy Listening","Acoustic","Humour","Speech","Chanson",
-        //  "Opera","Chamber Music","Sonata","Symphony","Booty Bass","Primus",
-        //  "Porn Groove","Satire","Slow Jam","Club","Tango","Samba",
-        //  "Folklore","Ballad","Power Ballad","Rhythmic Soul","Freestyle",
-        //  "Duet","Punk Rock","Drum Solo","Acapella","Euro-House","Dance Hall"
+        { name: "Rock" }, { name: "Hip-Hop" }, { name: "Country" }, { name: "EDM" }, { name: "Blue Grass" },
+        { name: "Blues" }, { name: "Classic Rock" }, { name: "Dance" }, { name: "Disco" }, { name: "Funk" }, { name: "Grunge" },
+        { name: "Jazz" }, { name: "Metal" }, { name: "Other" }, { name: "Pop" }, { name: "R&B" },
+        { name: "Rap" }, { name: "Reggae" }, { name: "Techno" }, { name: "Industrial" }, { name: "Alternative" }, { name: "Ska" },
+        { name: "Death Metal" }, { name: "Soundtrack" }, { name: "Vocal" }, { name: "Fusion" }, { name: "Trance" }, { name: "Classical" },
+        { name: "Instrumental" }, { name: "House" }, { name: "Gospel" }, { name: "Bass" }, { name: "Soul" }, { name: "Punk" }, { name: "Gothic" }, { name: "Electronic" },
+        { name: "Tribal" }, { name: "Polka" }, { name: "Retro" }, { name: "HardRock" }, { name: "Folk" }, { name: "Tribal" }, { name: "Swing" }, { name: "Latin" }, { name: "Bluegrass" }, { name: "Celtic" }, { name: "Big Band" }, { name: "Slow Rock" }, { name: "Speech" }, { name: "Booty Bass" }, { name: "Tango" }, { name: "Samba" }, { name: "Duet" }, { name: "Punk Rock" }
     ]
     const onSelect = (selectedList, selectedItem) => {
         input.onChange(selectedList)

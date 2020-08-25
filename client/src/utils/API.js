@@ -40,5 +40,8 @@ export default {
     //This is the search method to return specific bands per the users input
     searchBand: function(artist){
         return axios.get("/api/artists/" + artist)
+    },
+    searchGenre: function(genre){
+        return axios.get("/api/genres/" + genre)
     }
 }
