@@ -11,25 +11,25 @@ export default function Footer() {
                     <div className="col">
                         <h4>StreamBoat Inc</h4>
                         <ul className="list-unstyled">
-                            <li>GitHub Usernames</li>
-                            <li>Florida, USA</li>
+                            <li>https://github.com/EpicGibbon</li>
+                            <li>https://github.com/CameronG88</li>
                             <li>V1.0</li>
                         </ul>
                     </div>
                     <div className="col">
                         <h4>Follow us!</h4>
                         <ul className="list-unstyled">
-                            <li>Twitter</li>
-                            <li>Spotify</li>
-                            <li>Instagram</li>
+                            <li>Twitter @ StreamBoat</li>
+                            <li>Spotify @ StreamBoat Playlist</li>
+                            <li>Instagram @ StreamBoat</li>
                         </ul>
                     </div>
                     <div className="col">
                         <h4>Resources</h4>
                         <ul className="list-unstyled">
-                            <li>Wiki</li>
-                            <li>Music</li>
-                            <li>Licensing</li>
+                            <li>W3Schools</li>
+                            <li>MDN Docs</li>
+                            <li>UCF Coding Bootcamp</li>
                         </ul>
                     </div>
                 </div>

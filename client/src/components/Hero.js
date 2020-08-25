@@ -27,9 +27,11 @@ const Hero = () => {
             <h1>StreamBoat AWAITS!</h1>
             <p>What are you waiting for?</p>
             <div className="hero-btns">
+                <Link to="/bandpage">
                 <Button className="btns">
                     GET STARTED
                 </Button>
+                </Link>
                 <Link to="/login">
                     {showLoginBtn()}
                 </Link>
