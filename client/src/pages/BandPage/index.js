@@ -6,8 +6,8 @@ class BandPage extends React.Component {
     render() {
         return (
             <div>
-                <BandHeader />
-                <AboutMe />
+                <BandHeaderImg />
+                
             </div>
         )
     }
