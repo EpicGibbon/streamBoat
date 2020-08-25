@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <h4>StreamBoat Inc</h4>
+                        <h4>Bands&Notes Inc</h4>
                         <ul className="list-unstyled">
                             <li>https://github.com/EpicGibbon</li>
                             <li>https://github.com/CameronG88</li>
@@ -19,9 +19,9 @@ export default function Footer() {
                     <div className="col">
                         <h4>Follow us!</h4>
                         <ul className="list-unstyled">
-                            <li>Twitter @ StreamBoat</li>
-                            <li>Spotify @ StreamBoat Playlist</li>
-                            <li>Instagram @ StreamBoat</li>
+                            <li>Twitter @ Bands&Notes</li>
+                            <li>Spotify @ Bands&Notes Playlist</li>
+                            <li>Instagram @ Bands&Notes</li>
                         </ul>
                     </div>
                     <div className="col">
@@ -36,7 +36,7 @@ export default function Footer() {
                 <hr />
                 <div className="row">
                     <p className="col-sm">
-                        &copy;{new Date().getFullYear()} STREAMBOAT INC | All rights reserved | Terms Of Service | Privacy
+                        &copy;{new Date().getFullYear()} Bands&Notes INC | All rights reserved | Terms Of Service | Privacy
                     </p>
                 </div>
             </div>

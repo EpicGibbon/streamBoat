@@ -13,7 +13,7 @@ export default function AboutSBoat() {
                 <Col>
                     <Card style={{ width: '18rem', bg: "second" }}>
                         <Card.Body>
-                            <Card.Title>About StreamBoat</Card.Title>
+                            <Card.Title>About Bands&Notes</Card.Title>
                             <Card.Subtitle className="mb-2 text-muted">Creators:</Card.Subtitle>
                             <Card.Text>
                                 Some quick example text to build on the card title and make up the bulk of
