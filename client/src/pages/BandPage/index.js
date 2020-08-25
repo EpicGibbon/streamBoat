@@ -1,5 +1,5 @@
 import React from 'react';
-import BandHeader from '../../components/BandHeaderImg'
+import BandHeaderImg from '../../components/BandHeaderImg'
 import AboutMe from '../../components/AboutMe'
 
 class BandPage extends React.Component {
