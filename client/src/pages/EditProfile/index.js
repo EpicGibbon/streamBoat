@@ -9,9 +9,12 @@ const EditProfile = () => {
     const user = useSelector(state => state.auth.currentUser);
     const onFormSubmit = (formVal) => {
         console.log(formVal);
+        console.log(user._id);
+        console.log(user);
         API.editUser(user._id, formVal)
         .then(() => {
             console.log("Yo you updated");
+            console.log(user);
         })
     }
     const renderMessage = () => {

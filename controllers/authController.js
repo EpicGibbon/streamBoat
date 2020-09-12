@@ -8,9 +8,9 @@ module.exports = {
 
         try {
 
-            const { email, password, firstname, lastname, username, favgenres } = req.body;
+            const { email, password, firstname, lastname, username, favgenres, description } = req.body;
             // Check user enters all fields
-            if (!email || !password || !firstname || !lastname || !username) return res.status(400).json({ message: "Please enter all fields" });
+            if (!email || !password || !firstname || !lastname || !username || !description) return res.status(400).json({ message: "Please enter all fields" });
             // Check the user enters the right formatted email
             const reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             if (reg.test(email) === false) return res.status(400).json({ message: "Incorrect email format" });
@@ -24,7 +24,8 @@ module.exports = {
                 email,
                 password,
                 username,
-                favgenres
+                favgenres,
+                description
             })
 
             // Check if user already exist
@@ -49,7 +50,8 @@ module.exports = {
                             lastname,
                             email,
                             username,
-                            favgenres
+                            favgenres,
+                            description
                         })
                     })
 
@@ -88,7 +90,8 @@ module.exports = {
                         lastname: user.lastname,
                         email,
                         username: user.username,
-                        favgenres: user.favgenres
+                        favgenres: user.favgenres,
+                        description: user.description
                     })
                 })
             })
