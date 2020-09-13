@@ -60,6 +60,12 @@ export const UserDashboard = () => {
                             <Button.Content visible>Register Your Band</Button.Content>
                         </Button>
                     </Link>
+                    
+                    <Link to="/imageUpload">
+                        <Button color="black" animated secondary>
+                            <Button.Content visible>Upload an image</Button.Content>
+                        </Button>
+                    </Link>
                     <Link to="/editProfile">
                         <Button color="black" animated secondary>
                             <Button.Content visible>Edit your Profile</Button.Content>

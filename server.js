@@ -4,9 +4,9 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const config = require("./config");
 const routes = require("./routes");
-
+const profile = require( './routes/profile' )
 const app = express();
-
+app.use( '/api/profile', profile );
 // middleware to parse data
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
