@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Container, Card } from 'react-bootstrap'
-import API from '../utils/API'
-import { List } from '../components/List'
+import { Col, Row, Container, Card } from 'react-bootstrap';
+import API from '../utils/API';
 
 function BandSuggestion(props) {
 
@@ -28,22 +27,28 @@ function BandSuggestion(props) {
                 <Col size="md-6">
                     <h1 className="text-center">Suggested Bands:</h1>
                     {bands.length ? (
-                        <List>
+                        // <List>
+                        <Container>
                             {bands.map(band => {
                                 return (
-                                    <Card key={band._id}>
+                                    <Card className="text-center" key={band._id}>
                                         <Card.Img variant="top" src="#" />
+                                        <Card.Title>{band.bandname}</Card.Title>
                                         <Card.Body>
-                                        <a href={"/artists/" + band._id}>
-                                            <strong>
-                                                {band.bandname} and their email is {band.bandemail}
-                                            </strong>
-                                        </a>
+                                            <a href={"/artists/" + band._id}>
+                                                <strong>
+                                                    {band.description}
+                                                </strong>
+                                            </a>
                                         </Card.Body>
+                                        <Card.Footer>
+                                            {band.bandemail}
+                                        </Card.Footer>
                                     </Card>
                                 );
                             })}
-                        </List>
+                            {/* </List> */}
+                        </Container>
                     ) : (
                             <h3 className="text-center">No bands to display</h3>
                         )}
