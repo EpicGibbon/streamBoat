@@ -29,9 +29,8 @@ export const UserDashboard = () => {
             })
     }
     useEffect(() => {
-       getBands();
-      }, []);
-    
+    getBands();
+    }, []);
 
 
 
