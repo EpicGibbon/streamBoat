@@ -86,7 +86,7 @@ const EditUserForm = (props) => {
                         autoComplete="chrome-off"
                         component={multiInput}
                     />
-                     <Field
+                    <Field
                         name="description"
                         component={renderInput}
                         label={user.description}

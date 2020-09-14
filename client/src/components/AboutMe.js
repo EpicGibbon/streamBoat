@@ -36,7 +36,7 @@ function AboutMe() {
             .catch(err => console.log(err));
     }
 
-    //       Deletes a book from the database with a given id, then reloads books from the db
+    //       Deletes an artist from the database with a given id, then reloads books from the db
     function deleteArtists(id) {
         API.deleteArtists(id)
             .then(res => loadArtists())
