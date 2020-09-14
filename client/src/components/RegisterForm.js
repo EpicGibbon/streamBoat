@@ -57,6 +57,11 @@ const RegisterForm = (props) => {
                         component={multiInput}
                         label="genres"
                     />
+                     <Field
+                        name="description"
+                        component={renderInput}
+                        label="About You"
+                    />
                         <Button secondary fluid size='large'>
                             {props.buttonText}
                         </Button>

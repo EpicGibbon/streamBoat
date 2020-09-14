@@ -1,11 +1,10 @@
-
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Multiselect } from 'multiselect-react-dropdown';
 import { useSelector, useDispatch } from "react-redux";
 import { Button, Form, Segment, Label } from 'semantic-ui-react';
 import { Field, reduxForm } from "redux-form";
 import { clearErrors } from "../actions/authActions";
-import API from '../utils/API';
+// import API from '../utils/API';
 import { Link } from 'react-router-dom';
 
 const EditUserForm = (props) => {
@@ -22,12 +21,12 @@ const EditUserForm = (props) => {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
-    const getBands = () => {
-        API.getUserArtists(user._id)
-            .then((res) => {
-                console.log(res.data)
-            })
-    }
+    // const getBands = () => {
+    //     API.getUserArtists(user._id)
+    //         .then((res) => {
+    //             console.log(res.data)
+    //         })
+    // }
     const multiInput = ({ input }) => {
         let genres = [
             { name: "rock" }, { name: "Hip-Hop" }, { name: "Country" }, { name: "EDM" }, { name: "Blue Grass" },
@@ -86,6 +85,11 @@ const EditUserForm = (props) => {
                         name="favgenres"
                         autoComplete="chrome-off"
                         component={multiInput}
+                    />
+                     <Field
+                        name="description"
+                        component={renderInput}
+                        label={user.description}
                     />
                     <Button secondary fluid size='large'>
                         {props.buttonText}

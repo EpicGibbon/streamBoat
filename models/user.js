@@ -25,6 +25,10 @@ const UserSchema = new Schema({
     favgenres: {
         type: Array,
         require: true
-}
+    },
+    description: {
+        type: String,
+        require: true
+    }
 });
 module.exports = User = mongoose.model("user", UserSchema);

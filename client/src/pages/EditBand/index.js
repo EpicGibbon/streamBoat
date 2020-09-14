@@ -5,7 +5,7 @@ import API from '../../utils/API';
 
 const EditBand = () => {
 
-    const [band, setBand] = useState([])
+
     const [formObject, setFormObject] = useState({
         bandname: "",
         bandlocation: "",
@@ -14,14 +14,15 @@ const EditBand = () => {
         bandgenre: [],
         description: "",
     })
-
-    function loadBand() {
-        API.getBand()
-            .then(res =>
-                setBand(res.data)
-            )
-            .catch(err => console.log(err));
-    }
+    // ========Commented code should go in edit band form for preset values======
+    // const [band, setBand] = useState([])
+    // function loadBand() {
+    //     API.getBand()
+    //         .then(res =>
+    //             setBand(res.data)
+    //         )
+    //         .catch(err => console.log(err));
+    // }
   
     function handleFormSubmit(formVal) {
         // e.preventDefault();
@@ -31,16 +32,16 @@ const EditBand = () => {
             location: formObject.location,
             email: formObject.email,
             genre: formObject.genre,
-            desciption: formObject.desciption
+            description: formObject.description
         })
             .then(() => setFormObject({
                 bandname: "",
                 location: "",
                 email: "",
                 genre: "",
-                desciption: "",
+                description: "",
             }))
-            .then(() => loadBand())
+            // .then(() => loadBand())
             .catch(err => console.log(err))
     };
 

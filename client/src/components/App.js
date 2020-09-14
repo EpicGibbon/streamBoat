@@ -16,6 +16,7 @@ import Footer from '../components/Footer';
 import RegisterBand from '../pages/RegisterBand';
 import EditProfile from '../pages/EditProfile';
 import EditBand from '../pages/EditBand';
+import ImageUpload from '../pages/ImageUpload'
 import '../css/FooterContainer.css'
 
 export const App = () => {
@@ -42,6 +43,7 @@ export const App = () => {
                             <PrivateRoute path="/dashboard" exact component={UserDashboard} />
                             <PrivateRoute path="/editProfile" exact component={EditProfile} />
                             <PrivateRoute path="/editBand" exact component={EditBand} />
+                            <PrivateRoute path="/imageUpload" exact component={ImageUpload} />
                             <Route component={NoMatch} />
                         </Switch>
                     </Router>
