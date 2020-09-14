@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Col, Row, Container } from 'react-bootstrap'
+import { Col, Row, Container, Card } from 'react-bootstrap'
 import API from '../utils/API'
-import { List, ListItem} from '../components/List'
+import { List } from '../components/List'
 
 function BandSuggestion(props) {
 
@@ -31,18 +31,21 @@ function BandSuggestion(props) {
                         <List>
                             {bands.map(band => {
                                 return (
-                                    <ListItem key={band._id}>
+                                    <Card key={band._id}>
+                                        <Card.Img variant="top" src="#" />
+                                        <Card.Body>
                                         <a href={"/artists/" + band._id}>
                                             <strong>
                                                 {band.bandname} and their email is {band.bandemail}
                                             </strong>
                                         </a>
-                                    </ListItem>
+                                        </Card.Body>
+                                    </Card>
                                 );
                             })}
                         </List>
                     ) : (
-                            <h3>No bands to display</h3>
+                            <h3 className="text-center">No bands to display</h3>
                         )}
                 </Col>
             </Row>
