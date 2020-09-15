@@ -71,6 +71,12 @@ module.exports = {
         .find({ "bandgenre.name": req.params.genre })
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
+    },
+    FollowBand: function(req, res) {
+        db.Band
+        .findOneAndUpdate({ followers: req.params._id })
+        .then(dbModel => res.json(dbModel))
+        .catch(err => res.status(422).json(err));
     }
 }
 

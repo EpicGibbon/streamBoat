@@ -4,10 +4,10 @@ const bandController = require("../controllers/bandController");
 // Matches with "/api/books"
 router.route("/artists")
   .get(bandController.findAll)
-  .post(bandController.create);
+  .post(bandController.create)
 
   router.route("/artists/:artist")
-  .get(bandController.searchBand)
+  .get(bandController.searchBand);
 
 router
   .route("/artist/:id")
@@ -26,6 +26,10 @@ router
 
   router
   .route("/genres/:genre")
-  .get(bandController.searchGenre)
+  .get(bandController.searchGenre);
+
+  router
+  .route("/user/following/:id")
+  .post(bandController.FollowBand);
 
 module.exports = router;

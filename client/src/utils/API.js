@@ -44,7 +44,8 @@ export default {
     searchGenre: function(genre){
         return axios.get("/api/genres/" + genre)
     },
-    followBand: function() {
-        return axios.get("/api/follow")
+    //Getting band information from user side(?)
+    FollowBand: function(bandid) {
+        return axios.post("/api/user/following/" + bandid)
     }
 }
