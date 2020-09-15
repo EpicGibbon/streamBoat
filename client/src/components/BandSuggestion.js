@@ -10,6 +10,14 @@ function BandSuggestion(props) {
     //Load all bands and store them with setBand
     useEffect(() => {
         loadBands()
+    //     const isFollowing = {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/json"},
+    //         body: JSON.stringify({ following: "true"})
+    //     };
+    //     fetch("https://jsonplaceholder.typicode.com/posts", isFollowing)
+    //     .then(response => response.json())
+    //     .then(console.log((res)))
     }, [])
 
     //Loads all bands and sets them to bands
@@ -27,27 +35,28 @@ function BandSuggestion(props) {
                 <Col size="md-6">
                     <h1 className="text-center">Suggested Bands:</h1>
                     {bands.length ? (
-                        // <List>
                         <Container>
                             {bands.map(band => {
                                 return (
                                     <Card className="text-center" key={band._id}>
                                         <Card.Img variant="top" src="#" />
-                                        <Card.Title>{band.bandname}</Card.Title>
-                                        <Card.Body>
+                                        <Card.Title>
                                             <a href={"/artists/" + band._id}>
                                                 <strong>
-                                                    {band.description}
+                                                    {band.bandname}
                                                 </strong>
                                             </a>
+                                        </Card.Title>
+                                        <Card.Body>
+                                            {band.description}
                                         </Card.Body>
                                         <Card.Footer>
                                             {band.bandemail}
+                                            <button type="button" id="follow">Follow</button>
                                         </Card.Footer>
                                     </Card>
                                 );
                             })}
-                            {/* </List> */}
                         </Container>
                     ) : (
                             <h3 className="text-center">No bands to display</h3>

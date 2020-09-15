@@ -43,5 +43,8 @@ export default {
     },
     searchGenre: function(genre){
         return axios.get("/api/genres/" + genre)
+    },
+    followBand: function() {
+        return axios.get("/api/follow")
     }
 }
