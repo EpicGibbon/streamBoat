@@ -36,8 +36,15 @@ const BandSchema = new Schema({
     },
     date: {
         type: Date, default: Date.now
-    }
+    },
+    followers: [
+        { 
+            type: Schema.ObjectId, 
+            ref: 'User' 
+        }
+    ]
 });
+
 const Band = mongoose.model("band", BandSchema);
 
 module.exports = Band;

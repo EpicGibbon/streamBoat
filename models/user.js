@@ -26,6 +26,23 @@ const UserSchema = new Schema({
         type: Array,
         require: true
     },
+    following: [
+        {
+            user:{ 
+                type: Schema.ObjectId, 
+                ref: 'User' 
+            },
+        }
+
+    ],
+    followers: [
+        {
+            user:{ 
+                type: Schema.ObjectId, 
+                ref: 'User' 
+            },
+        }
+    ],
     description: {
         type: String,
         require: true

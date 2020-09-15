@@ -9,7 +9,6 @@ router.route("/artists")
   router.route("/artists/:artist")
   .get(bandController.searchBand)
 
-// Matches with "/api/books/:id"
 router
   .route("/artist/:id")
   .get(bandController.findById)
