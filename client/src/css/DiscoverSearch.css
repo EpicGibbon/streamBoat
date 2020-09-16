@@ -7,15 +7,15 @@
     align-items: center;
     box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
     object-fit: contain;
-    background-color: #1b1c1d;
+    background-color: #1B1C1D;
 }
-
 #autocomplete-input {
     object-fit: cover;
-    width: 100%;
+    width: 80%;
     height: auto;
-    position: absolute;
+    position: relative;
     background-repeat: no-repeat;
     font-size: 18px !important;
-    margin: 15px 0 0 0 !important;
+    margin: 6px 0 20px 0 !important;
+    border-radius: 5%;
 }

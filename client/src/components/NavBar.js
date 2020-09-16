@@ -2,9 +2,7 @@ import React from 'react';
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
-
 export const NavBar = () => {
-
     const { currentUser, isAuthenticated } = useSelector(state => state.auth)
 console.log(currentUser);
     // helper to show links on Navbar if user is authenticated
@@ -24,19 +22,15 @@ console.log(currentUser);
                 </>
             )
         }
-
     }
-
     return (
         <div className="ui inverted menu">
             <Link to="/" className="item">Home</Link>
             {isAuthenticated ? <Link to="/Discover" className="item">Discover</Link> : ""}
-            {isAuthenticated ? <Link to="/BandPage" className="item">Search</Link> : ""}
             <div className="right menu">
                 {showLinks()}
             </div>
         </div>
     )
 }
-
 export default NavBar;
