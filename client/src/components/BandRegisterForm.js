@@ -144,9 +144,6 @@ const multiInput = ({ input }) => {
     )
 }
 
-// const imageInput = () => {
-
-// }
 export default reduxForm({
     form: "bandregisterform"
 })(BandRegisterForm)

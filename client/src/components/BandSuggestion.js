@@ -10,14 +10,14 @@ function BandSuggestion(props) {
     //Load all bands and store them with setBand
     useEffect(() => {
         loadBands()
-    //     const isFollowing = {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/json"},
-    //         body: JSON.stringify({ following: "true"})
-    //     };
-    //     fetch("https://jsonplaceholder.typicode.com/posts", isFollowing)
-    //     .then(response => response.json())
-    //     .then(console.log((res)))
+        //     const isFollowing = {
+        //         method: "POST",
+        //         headers: { "Content-Type": "application/json"},
+        //         body: JSON.stringify({ following: "true"})
+        //     };
+        //     fetch("https://jsonplaceholder.typicode.com/posts", isFollowing)
+        //     .then(response => response.json())
+        //     .then(console.log((res)))
     }, [])
 
     //Loads all bands and sets them to bands
@@ -32,12 +32,13 @@ function BandSuggestion(props) {
     return (
         <Container fluid>
             <Row>
-                <Col size="md-6">
-                    <h1 className="text-center">Suggested Bands:</h1>
-                    {bands.length ? (
-                        <Container>
-                            {bands.map(band => {
-                                return (
+
+                <h1 className="text-center">Suggested Bands:</h1>
+                {bands.length ? (
+                    <Container>
+                        {bands.map(band => {
+                            return (
+                                <Col md={3}>
                                     <Card className="text-center" key={band._id}>
                                         <Card.Img variant="top" src="#" />
                                         <Card.Title>
@@ -55,13 +56,13 @@ function BandSuggestion(props) {
                                             <button type="button" id="follow">Follow</button>
                                         </Card.Footer>
                                     </Card>
-                                );
-                            })}
-                        </Container>
-                    ) : (
-                            <h3 className="text-center">No bands to display</h3>
-                        )}
-                </Col>
+                                </Col>
+                            );
+                        })}
+                    </Container>
+                ) : (
+                        <h3 className="text-center">No bands to display</h3>
+                    )}
             </Row>
         </Container>
     );

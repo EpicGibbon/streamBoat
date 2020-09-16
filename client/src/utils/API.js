@@ -46,6 +46,6 @@ export default {
     },
     //Getting band information from user side(?)
     FollowBand: function(bandid) {
-        return axios.post("/api/user/following/" + bandid)
+        return axios.put("/api/user/following/" + bandid)
     }
 }
