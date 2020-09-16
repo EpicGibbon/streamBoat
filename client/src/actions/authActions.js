@@ -34,9 +34,11 @@ export const registerUser = (data) => async dispatch => {
         dispatch({
             type: REGISTER_SUCCESS,
             payload: response.data
-        });
+        })
+        .then(window.location.reload())
+        .then(
         // redirect to page
-        history.push("/discover");
+        history.push("/discover"));
 
     } catch (err) {
         // dispatch get error Action
@@ -56,9 +58,10 @@ export const loginUser = (data) => async dispatch => {
         dispatch({
             type: LOGIN_SUCCESS,
             payload: response.data
-        });
+        })
+        .then(window.location.reload())
         // redirect to page
-        history.push("/discover");
+        .then(history.push("/discover"));
 
     } catch (err) {
         // dispatch get error Action
