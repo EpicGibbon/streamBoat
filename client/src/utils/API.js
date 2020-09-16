@@ -11,8 +11,6 @@ export default {
     loadUser(headers) {
         return axios.get("/auth/user", headers)
     },
-
-
     //===========Band requests=========
     getBands: function() {
         return axios.get("/api/artists")
@@ -32,7 +30,6 @@ export default {
     saveBand: function(artistData) {
         return axios.post("/api/artists", artistData)
     },
-
     // =========Band/User Edit========
     editUser: function(userid){
         return axios.put("/api/user/edit/" + userid)
@@ -48,7 +45,7 @@ export default {
         return axios.get("/api/genres/" + genre)
     },
     //Getting band information from user side(?)
-    FollowBand: function(bandid) {
+    followBand: function(bandid) {
         return axios.put("/api/user/following/" + bandid)
     }
 }

@@ -18,7 +18,6 @@ const LoginForm = (props) => {
             setErrorMessage(error.message)
             dispatch(clearErrors())
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
     return (

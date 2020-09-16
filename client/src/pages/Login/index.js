@@ -17,7 +17,6 @@ const Login = (props) => {
         if (isAuthenticated) {
             props.history.push("/")
         }
-
     })
 
     const renderFormMessage = () => {
@@ -25,7 +24,6 @@ const Login = (props) => {
     }
 
     const onFormSubmit = (formVal) => {
-        console.log(formVal);
         dispatch(loginUser(formVal));
     }
 
