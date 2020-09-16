@@ -19,7 +19,6 @@ const EditBandForm = (props) => {
             setErrorMessage(error.message)
             dispatch(clearErrors())
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
     const getBands = () => {
@@ -30,14 +29,7 @@ const EditBandForm = (props) => {
                 console.log(bands);
 
                 return (
-                    // <div>
-                    //     <ul>
-                    //     {/* {bands.map(band => <li key={band.bandname}>{band.bandname}</li>
-                    //     )} */}
-                    //     <li>HEY</li>
-                    //     </ul>
-                    // </div>
-bands
+                    bands
                 )
             })
     }
@@ -70,12 +62,12 @@ bands
 
     return (
         <>
-        <div>
-        <Button onClick={getBands}>Select Band</Button>
-        </div>
+            <div>
+                <Button onClick={getBands}>Select Band</Button>
+            </div>
             <Form onSubmit={props.handleSubmit(props.onSubmit)} size='large'>
                 <Segment>
-                    
+
                     <Field
                         name="bandname"
                         component={renderInput}
@@ -96,7 +88,7 @@ bands
                         component={renderInput}
                         label="Change band contact email"
                     />
-                      <Field
+                    <Field
                         name="description"
                         component={renderInput}
                         label="Edit band description"

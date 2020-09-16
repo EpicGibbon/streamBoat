@@ -10,10 +10,8 @@ export const UserDashboard = () => {
     // access to the currentUser property from the auth reducer state
     const { currentUser } = useSelector(state => state.auth)
     const [bands, setBands] = useState([]);
-    console.log(currentUser);
     const genreArray = (currentUser.favgenres)
     const renGenre = genreArray.map((genre, index) => {
-        console.log(genre);
         return (
             <a key={`${genre.name}`}>
                 {`${genre.name} `}
@@ -25,11 +23,10 @@ export const UserDashboard = () => {
             .then((res) => {
                 const bandArray = res.data
                 setBands(bandArray)
-                console.log(bandArray);
             })
     }
     useEffect(() => {
-    getBands();
+        getBands();
     }, []);
 
 
@@ -59,7 +56,7 @@ export const UserDashboard = () => {
                             <Button.Content visible>Register Your Band</Button.Content>
                         </Button>
                     </Link>
-                    
+
                     <Link to="/imageUpload">
                         <Button color="black" animated secondary>
                             <Button.Content visible>Upload an image</Button.Content>

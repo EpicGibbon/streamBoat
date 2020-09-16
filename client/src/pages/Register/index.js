@@ -15,12 +15,10 @@ const Register = () => {
     }
 
     const onFormSubmit = (formVal) => {
-        console.log(formVal);
         dispatch(registerUser(formVal));
     }
 
     return (
-
         <div className="form-container">
             <Header as='h2' secondary="true" textAlign='center'>
                 Register

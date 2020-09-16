@@ -14,5 +14,5 @@ function MerchCards() {
             </div>
         )
     }
-
+    
 export default MerchCards()

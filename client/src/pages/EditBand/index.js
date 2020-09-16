@@ -23,7 +23,7 @@ const EditBand = () => {
     //         )
     //         .catch(err => console.log(err));
     // }
-  
+
     function handleFormSubmit(formVal) {
         // e.preventDefault();
         console.log(formVal);

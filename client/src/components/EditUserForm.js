@@ -18,15 +18,8 @@ const EditUserForm = (props) => {
             setErrorMessage(error.message)
             dispatch(clearErrors())
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
-    // const getBands = () => {
-    //     API.getUserArtists(user._id)
-    //         .then((res) => {
-    //             console.log(res.data)
-    //         })
-    // }
     const multiInput = ({ input }) => {
         let genres = [
             { name: "rock" }, { name: "Hip-Hop" }, { name: "Country" }, { name: "EDM" }, { name: "Blue Grass" },
@@ -96,11 +89,6 @@ const EditUserForm = (props) => {
                     </Button>
                 </Segment>
             </Form>
-            {/* <Link to="/editBand">
-                <Button inverted color="red" animated secondary>
-                    <Button.Content visible>Edit Your Bands</Button.Content>
-                </Button>
-            </Link> */}
             <Button inverted color="red" animated secondary>
                     <Button.Content visible>Delete Account</Button.Content>
                 </Button>

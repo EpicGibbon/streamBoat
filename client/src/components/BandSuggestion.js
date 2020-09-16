@@ -10,14 +10,6 @@ function BandSuggestion(props) {
     //Load all bands and store them with setBand
     useEffect(() => {
         loadBands()
-        //     const isFollowing = {
-        //         method: "POST",
-        //         headers: { "Content-Type": "application/json"},
-        //         body: JSON.stringify({ following: "true"})
-        //     };
-        //     fetch("https://jsonplaceholder.typicode.com/posts", isFollowing)
-        //     .then(response => response.json())
-        //     .then(console.log((res)))
     }, [])
 
     //Loads all bands and sets them to bands
@@ -32,13 +24,12 @@ function BandSuggestion(props) {
     return (
         <Container fluid>
             <Row>
-
-                <h1 className="text-center">Suggested Bands:</h1>
                 {bands.length ? (
                     <Container>
+                        <h1 className="text-center">Suggested Bands:</h1>
                         {bands.map(band => {
                             return (
-                                <Col md={3}>
+                                <Col md={12}>
                                     <Card className="text-center" key={band._id}>
                                         <Card.Img variant="top" src="#" />
                                         <Card.Title>
@@ -61,7 +52,9 @@ function BandSuggestion(props) {
                         })}
                     </Container>
                 ) : (
+                    <Container>
                         <h3 className="text-center">No bands to display</h3>
+                    </Container>
                     )}
             </Row>
         </Container>

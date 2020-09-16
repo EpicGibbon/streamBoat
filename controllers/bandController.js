@@ -69,7 +69,7 @@ module.exports = {
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     },
-    FollowBand: function(req, res) {
+    followBand: function(req, res) {
         db.Band
         .findOneAndUpdate( { _id: req.params.id}, {$push: { followers: req.body }}, {new: true})
         .then(dbModel => res.json(dbModel))

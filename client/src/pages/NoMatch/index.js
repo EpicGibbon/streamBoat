@@ -10,7 +10,7 @@ export const NoMatch = () => {
                 <h1>
                     <span role="img" aria-label="Face With Rolling Eyes Emoji">
                         🙄
-              </span>
+            </span>
                 </h1>
             </Message>
         </>

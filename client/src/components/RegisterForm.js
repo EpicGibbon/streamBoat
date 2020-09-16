@@ -18,7 +18,6 @@ const RegisterForm = (props) => {
             setErrorMessage(error.message)
             dispatch(clearErrors())
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [error])
 
     return (
@@ -57,7 +56,7 @@ const RegisterForm = (props) => {
                         component={multiInput}
                         label="genres"
                     />
-                     <Field
+                    <Field
                         name="description"
                         component={renderInput}
                         label="About You"
@@ -119,7 +118,6 @@ const multiInput = ({ input }) => {
     return (
         <Multiselect
             options={genres} // Options to display in the dropdown
-            // selectedValues={this.state.selectedValue} // Preselected value to persist in dropdown
             onSelect={onSelect} // Function will trigger on select event
             onRemove={onRemove} // Function will trigger on remove event
             displayValue="name" // Property name to display in the dropdown options
