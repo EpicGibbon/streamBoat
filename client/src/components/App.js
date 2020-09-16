@@ -11,7 +11,6 @@ import Register from "../pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import NoMatch from "../pages/NoMatch";
 import Discover from '../pages/Discover';
-import BandPage from '../pages/BandPage';
 import Footer from '../components/Footer';
 import RegisterBand from '../pages/RegisterBand';
 import EditProfile from '../pages/EditProfile';
@@ -38,7 +37,6 @@ export const App = () => {
                             <Route path="/register" component={Register} />
                             <Route path="/Discover" exact component={Discover} />
                             <PrivateRoute path="/registerBand" exact component={RegisterBand} />
-                            <PrivateRoute path="/BandPage" exact component={BandPage} />
                             <PrivateRoute path="/dashboard" exact component={UserDashboard} />
                             <PrivateRoute path="/editProfile" exact component={EditProfile} />
                             <PrivateRoute path="/editBand" exact component={EditBand} />

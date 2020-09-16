@@ -15,7 +15,7 @@ const RegisterBand = () => {
         API.saveBand(formVal)
         .then(() => {
             console.log("success!");
-            history.push('/BandPage');
+            history.push('/discover');
         })
     }
 

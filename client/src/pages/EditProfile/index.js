@@ -11,10 +11,15 @@ const EditProfile = () => {
 
     const user = useSelector(state => state.auth.currentUser);
     const [currentuser, clear] = useState([user])
+    const [userinfo, setuserinfo] = useState([])
     const onFormSubmit = (formVal) => {
-        API.editUser(user._id, formVal)
+        
+        setuserinfo(formVal)
+       
+        API.editUser(user._id, userinfo)
             .then(() => {
                 console.log("Successful Update");
+                history.push('/dashboard')
             })
     }
 

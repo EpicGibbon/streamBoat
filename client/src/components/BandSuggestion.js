@@ -29,8 +29,8 @@ function BandSuggestion(props) {
                         <h1 className="text-center">Suggested Bands:</h1>
                         {bands.map(band => {
                             return (
-                                <Col md={12}>
-                                    <Card className="text-center" key={band._id}>
+                                <Col md={12} key={band._id}>
+                                    <Card className="text-center" >
                                         <Card.Img variant="top" src="#" />
                                         <Card.Title>
                                             <a href={"/artists/" + band._id}>
