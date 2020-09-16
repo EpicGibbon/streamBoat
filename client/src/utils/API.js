@@ -26,6 +26,9 @@ export default {
     deleteBand: function(id) {
         return axios.delete("/api/artist/" + id);
     },
+    deleteUser: function(id) {
+        return axios.delete("/api/user/edit/" + id);
+    },
     saveBand: function(artistData) {
         return axios.post("/api/artists", artistData)
     },

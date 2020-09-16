@@ -96,11 +96,14 @@ const EditUserForm = (props) => {
                     </Button>
                 </Segment>
             </Form>
-            <Link to="/editBand">
+            {/* <Link to="/editBand">
                 <Button inverted color="red" animated secondary>
                     <Button.Content visible>Edit Your Bands</Button.Content>
                 </Button>
-            </Link>
+            </Link> */}
+            <Button inverted color="red" animated secondary>
+                    <Button.Content visible>Delete Account</Button.Content>
+                </Button>
         </>
     )
 }
