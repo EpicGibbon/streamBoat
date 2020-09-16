@@ -37,12 +37,10 @@ const BandSchema = new Schema({
     date: {
         type: Date, default: Date.now
     },
-    followers: [
-        { 
-            type: Schema.ObjectId, 
-            ref: 'User' 
-        }
-    ]
+    followers: { 
+        type: Array,
+        required: true,
+    }
 });
 
 const Band = mongoose.model("band", BandSchema);

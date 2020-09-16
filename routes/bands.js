@@ -30,6 +30,6 @@ router
 
   router
   .route("/user/following/:id")
-  .post(bandController.FollowBand);
+  .put(bandController.FollowBand);
 
 module.exports = router;
