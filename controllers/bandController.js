@@ -2,6 +2,7 @@
 // const jwt = require("jsonwebtoken");
 // const config = require("../config");
 const db = require("../models");
+// import  $ from 'jquery'
 
 module.exports = {
     findAll: function (req, res) {
@@ -43,11 +44,6 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     editUser: function (req, res) {
-        db.User.find({ _id: req.params._id })
-            .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
-    },
-    editUser: function (req, res) {
         db.User.findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
@@ -55,6 +51,7 @@ module.exports = {
     removeUser: function (req, res) {
         db.User
             .findById({ _id: req.params.id })
+            // .then(console.log(dbModel))
             .then(dbModel => dbModel.remove())
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
@@ -74,7 +71,7 @@ module.exports = {
     },
     FollowBand: function(req, res) {
         db.Band
-        .findOneAndUpdate({ followers: req.params._id })
+        .findOneAndUpdate({ _id: req.params.id }, {$push: { "followers": req.body }})
         .then(dbModel => res.json(dbModel))
         .catch(err => res.status(422).json(err));
     }
