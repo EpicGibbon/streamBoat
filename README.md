@@ -1,72 +1,39 @@
 
-# Boiler Plate - MERN Application with Authentication using JSON Web Tokens (JWT)  
-
-## Online Example & Deployment:
-
-This application was deployed to Heroku services.
--  Link: https://project3-plate.herokuapp.com/
+# StreamBoat
+  ![badge](https://img.shields.io/badge/License-MIT-red)
 
 ## Description
+StreamBoat is a platform that indepdent artists can come and create their user profile, while also creating their band profile. By creating a band profile due to the scaliblity, the band will instantly pop up in suggested bands to all users until our database grows with enough entires for efficent searching
 
-This is a Boiler Plate MERN application with authentication using JSON Web Tokens. This APP was design to be used as a starting point for any developer looking to integrate authentication with a MERN application.
-
-This application uses JWT to handle Authentication and Redux to handle React state.
-
-## Web Tools:
-
-Full MERN stack: React, Node.js, Express, MongoDB, Javascript (ES6), Redux, JSON Web Tokens, Rest API, Semantic UI.
-
-## Table of Contents 
-
-* [Installation](#installation)
-
-* [Usage](#usage)
-
-
+## Table of Contents
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Licensing](#License)
+* [Contributions](#Contributions)
+* [Testing](#Tests)
 
 ## Installation
 
-To install necessary dependencies, run the following command:
+npm i
 
-```
-npm install
-```
 
 ## Usage
-``` 
-    To start using this project: 
+TBA
 
-    1.  Install node modules for Fron-End and Back-End with: npm install
-    2.  Create a .env file at the root location of the project to handle the database credentials and JWT secret:
-    
-        # Database Info
-        DATABASE_INFO = "Your Mongo Credentials"
+## License
+MIT
 
-        #JWT Secret
-        JWT_SECRET = "Your JWT Secret"
+## Contributions
+Anthony Aguiar, Cameron Graham, JorgeAlvarez, UCF Coding Bootcamp, W3 Schools, Brad Travery, MongoDB Documentation, React Documentation, Etc
 
-    3.  Run the following command to start the application: npm run dev
-    4.  Enjoy..!
-``` 
+## Tests
+N/A 
 
-## Questions
 
-<img src="https://avatars0.githubusercontent.com/u/40499942?v=4" alt="avatar" style="border-radius: 16px" width="30" />
+## Questions 
+You can click the following links to be taken to our GitHub profiles: (http://github.com./EpicGibbon) (http://github.com/CameronG88)
 
-If you have any questions about the repo, open an issue or contact [jaab30](https://github.com/jaab30) directly at jaab30@yahoo.com.
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/jaab30/ticketGen)
-
-<!-- ## Video Preview -->
-
-<!-- [<img src="https://user-images.githubusercontent.com/40499942/83711110-511fe400-a5f0-11ea-9fc9-e3397e3b0cb9.jpg" alt="app video" width="600px"/>](https://www.youtube.com/watch?v=6_Ur7afd5zE&feature=youtu.be) -->
-
-## images
-
-<img src="https://user-images.githubusercontent.com/40499942/86778760-bcfacf80-c028-11ea-9c8c-56fa2f0b5cd7.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778798-c84dfb00-c028-11ea-914b-70ea02530111.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778829-d4d25380-c028-11ea-90a0-8e1f75e5f3a4.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778867-df8ce880-c028-11ea-9778-b583e8b9b6bf.png" alt="app example" width="600px"/>
-<img src="https://user-images.githubusercontent.com/40499942/86778904-eb78aa80-c028-11ea-9e92-fed6e7c6af3f.png" alt="app example" width="600px"/>
-
+Feel free to reach out to me with any questions or comments: [mailto:Michant1997@gmail.com]
 
